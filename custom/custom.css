@@ -47,19 +47,6 @@
   --bs-body-bg: #fff;
 }
 
-.form-control-lg {
-  border-radius: 0 !important;
-  padding: 1rem 0.75rem;
-}
-
-.form-control::placeholder {
-  color: $color_medium_gray;
-  opacity: 1;
-  background: rgba($color_dark_gray, 0.18);
-  font-weight: 700;
-  letter-spacing: 0.01563rem;
-}
-
 /********************************************************************* Utility styles ****************************************************************************/
 body {
   overflow-x: hidden;
