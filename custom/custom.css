@@ -881,7 +881,6 @@ figure {
   letter-spacing: 0.015625rem !important;
 }
 #mc_embed_signup .button::after {
-  speak: none;
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
