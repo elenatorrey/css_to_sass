@@ -35,6 +35,7 @@
 }
 .navbar-brand .header-logo {
   width: 10rem;
+  padding: 0.5rem 1rem;
 }
 
 .btn-search {
@@ -659,6 +660,7 @@
   }
   .header-logo {
     width: 12rem;
+    padding: 0.5rem 1rem;
   }
   .search-btn-text {
     display: none;
@@ -739,6 +741,7 @@
   }
   .navbar-brand .header-logo {
     width: 18rem;
+    padding: 0.5rem 1rem;
   }
 }
 
