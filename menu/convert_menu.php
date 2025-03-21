@@ -8,6 +8,6 @@ function encodeFileToBase64($filePath) {
     }
 }
 
-$css_base64 = encodeFileToBase64("custom.css");
+$css_base64 = encodeFileToBase64("menu.css");
 echo $css_base64;
 ?>
