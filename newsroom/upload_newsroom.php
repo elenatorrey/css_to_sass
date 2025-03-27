@@ -16,8 +16,8 @@ $auth = array(
 
 // File Details
 $siteName = "SON-sandbox";           // Replace with the exact site name
-$cssFilePath = "/assets/css/menu.css"; // Path to the CSS file in Cascade CMS
-$localCssPath = "menu.css";  // Path to the local CSS file
+$cssFilePath = "/assets/css/newsroom.css"; // Path to the CSS file in Cascade CMS
+$localCssPath = "newsroom.css";  // Path to the local CSS file
 
 try {
  
@@ -39,7 +39,7 @@ try {
 
 
         $encodedData = base64_encode(file_get_contents($localCssPath));
-        echo substr($encodedData, 0, 500) . "\n";
+    
 
         $fileAsset->text = $encodedData;
      
