@@ -445,6 +445,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
     pointer-events: none;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    z-index: 100;
 
     a {
         position: sticky;
@@ -509,7 +510,138 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
     }
 }
 
+/********************************************FOOTER*******************************************************/
 
+.footer-links {
+    .nav-item {
+      .nav-link {
+        display: block;
+        font-family: $font_proxima;
+        color: rgba(255, 255, 255, 0.65);
+        font-weight: 700;
+        font-size: 1rem;
+        width: fit-content;
+        padding: 2px 0;
+        transition: 0.2s;
+        min-width: 2.75rem;
+  
+        &:hover {
+          color: $color_white;
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .info {
+      .nav-item {
+        .info-link {
+          color: $color_white;
+          padding-bottom: 0.5rem;
+  
+          &:hover {
+            color: $color_white !important;
+            text-decoration: underline !important;
+          }
+        }
+      }
+    }
+  }
+  
+  .social {
+    background: $color_rochester_blue;
+    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+  
+    &--icons {
+      flex-basis: 100%;
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      flex-direction: column;
+  
+      .social-title {
+        font-family: $font_proxima;
+        color: $color_white;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          display: inline-block;
+          margin: 0 2px;
+  
+          a {
+            font-size: 1rem;
+            border: 3px solid $color_white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            text-align: center;
+            text-decoration: none;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            transition: 0.3s;
+  
+            &::after {
+              content: '';
+              width: 100%;
+              height: 100%;
+              background: $color_white;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 50%;
+              transform: scale(0);
+              transition: 0.4s;
+              z-index: 1;
+            }
+  
+  
+            i {
+              color: $color_white;
+              transition: 0.3s;
+              position: relative;
+              top: 1px;
+              z-index: 2;
+            }
+  
+            &:hover {
+              &::after {
+                transform: scale(1.1);
+              }
+  
+              i {
+                color: $color_rochester_blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-link-blue {
+    background: $color_interactive_blue;
+    color: $color_white;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+  
+    &:hover {
+      color: $color_white;
+      text-decoration: underline;
+      transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
 
 /************** MEDIA QUERIES **************/
 
@@ -566,7 +698,36 @@ $breakpoints: (
     }
 }
 
+@include media-breakpoint-down(lg) {
+    .footer-links {
+      .border-start {
+        border-left: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+      }
+    }
+  
+    .footer-bottom {
+      div {
+        display: block !important;
+        text-align: center;
+      }
+  
+      .footer-link-blue {
+        width: 50%;
+      }
+    }
+  
+    .juicer-feed {
+      display: none;
+    }
+  }
+
 @include media-breakpoint-up(lg) {
+
+    .social--icons {
+        flex-basis: 30%;
+        padding: 0;
+   }
 
     .primary-menu-white-mobile {
         display: none;
@@ -906,6 +1067,19 @@ $breakpoints: (
 }
 
 @include media-breakpoint-up(xl) {
+
+    .social--icons {
+        ul {
+          li {
+            a {
+              font-size: 1.35rem;
+              width: 45px;
+              height: 45px;
+            }
+          }
+        }
+      }
+
     .one-column-dropdown-mega>* {
         flex: 1 1 5rem;
         -webkit-flex: 1 1 5rem;

@@ -9,9 +9,8 @@ $auth = array(
 
 // File Details
 $siteName = "SON-sandbox";           // Replace with the exact site name
-$cssFilePath = "/assets/css/components.css"; // Path to the CSS file in Cascade CMS
-$localCssPath = "components.css";  // Path to the local CSS file
-$fileId = "15228444ac1904766a0632aebead830b";          // If you prefer using ID instead of path
+$cssFilePath = "/assets/css/menu.css"; // Path to the CSS file in Cascade CMS
+$localCssPath = "menu.css";  // Path to the local CSS file
 
 
     $client = new SoapClient($soapURL, array('trace' => 1, 'location' => str_replace('?wsdl', '', $soapURL)));

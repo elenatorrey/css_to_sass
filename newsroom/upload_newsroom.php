@@ -38,7 +38,8 @@ try {
         $fileAsset = $readResponse->readReturn->asset->file;
 
 
-        $encodedData = file_get_contents($localCssPath);
+        $encodedData = base64_encode(file_get_contents($localCssPath));
+        echo substr($encodedData, 0, 500) . "\n";
 
         $fileAsset->text = $encodedData;
      

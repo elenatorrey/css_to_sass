@@ -4,7 +4,7 @@ $soapURL = "https://its-wcms-up01.its.rochester.edu:8443/ws/services/AssetOperat
 
 // Authentication Details
 $auth = array(
-    'apiKey'   => '3de8e1a9-c7e3-4ec1-a009-a80b537dfb77'      // Replace with your API key
+    'apiKey'   => 'c58322bf-0b6d-4156-a316-3c7b084a62dc'      // Replace with your API key
 );
 
 // File Details
@@ -37,7 +37,7 @@ try {
         $encodedData = base64_encode(file_get_contents($localCssPath));
 
     
-        $fileAsset->data = $encodedData;
+        $fileAsset->text = $encodedData;
 
      
         $editParams = array(
