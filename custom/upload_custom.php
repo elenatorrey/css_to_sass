@@ -31,15 +31,11 @@ try {
     $readResponse = $client->read($readParams);
 
     if ($readResponse->readReturn->success == "true") {
-
+       
         $fileAsset = $readResponse->readReturn->asset->file;
 
-        $encodedData = base64_encode(file_get_contents($localCssPath));
+        $fileAsset->text = file_get_contents($localCssPath);
 
-    
-        $fileAsset->text = $encodedData;
-
-     
         $editParams = array(
             'authentication' => $auth,
             'asset' => array('file' => $fileAsset)
