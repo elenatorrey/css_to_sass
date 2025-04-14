@@ -38,8 +38,7 @@ try {
         $fileAsset = $readResponse->readReturn->asset->file;
 
 
-        $encodedData = base64_encode(file_get_contents($localCssPath));
-    
+        $encodedData = file_get_contents($localCssPath);
 
         $fileAsset->text = $encodedData;
      
@@ -49,6 +48,7 @@ try {
         );
 
         $editResponse = $client->edit($editParams);
+
 
     
         if ($editResponse->editReturn->success == "true") {
@@ -63,6 +63,3 @@ try {
     echo "❌ Exception: " . $e->getMessage();
 }
 ?>
-
-
-

@@ -1,4 +1,4 @@
-/*********************************************ACCORDIONS test*********************************************/
+/*********************************************ACCORDIONS*********************************************/
 .accordion .accordion-item {
   border: none;
 }
@@ -7,6 +7,22 @@
 }
 .accordion .accordion-item.bg-yellow:last-child {
   border-bottom: 3px solid #565656;
+}
+.accordion .accordion-item:first-of-type > .accordion-header .accordion-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.accordion .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.accordion .accordion-item:last-of-type {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.accordion .accordion-item:last-of-type > .accordion-collapse {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .accordion .accordion-button {
   border-top: 3px solid #e7e7e7;
@@ -175,39 +191,35 @@ a.card-link {
   font-style: normal;
 }
 
-.card-body .card-list-title:after,
-.card-body .card-list-title-ext:after {
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: auto;
-  font-family: "Font Awesome 6 Pro";
-  font-weight: 900;
-  content: "";
-  opacity: 0;
-  padding-left: 1em;
-  font-size: 0.75em;
-}
 .card-body .card-list-title:after {
   content: "\f061";
+  font-family: "Font Awesome 6 Pro";
+  padding-left: 1em;
+  font-size: 0.75em;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1;
 }
 .card-body .card-list-title:hover {
   color: #fff;
   opacity: 1;
-  transform: translateX(1.5rem);
+  transform: translateX(0.5rem);
+  transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .card-body .card-list-title-ext:after {
   content: "\f35d";
+  font-family: "Font Awesome 6 Pro";
+  padding-left: 1em;
+  font-size: 0.75em;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1;
 }
 .card-body .card-list-title-ext:hover {
   color: #fff;
   opacity: 1;
   transform: translateX(1.5rem);
+  transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .card-list:not(.card-list-1) {
@@ -453,6 +465,11 @@ video::cue {
 .testimonial-component .blockquote-footer::before {
   content: "" !important;
 }
+.testimonial-component .directory-title {
+  font-weight: 500;
+  color: #252525;
+  font-size: 1rem;
+}
 .testimonial-component .border-top-grey {
   border-top: 1px solid #565656;
 }
@@ -619,7 +636,13 @@ video::cue {
   line-height: 1.2;
 }
 
-/************************************************DIRECTORY************************************************/
+/************************************************DIRECTORY and FACULTY Features************************************************/
+.faculty-feature .faculty-title {
+  font-weight: 500;
+  color: #252525;
+  font-size: 1rem;
+}
+
 .directory-feature a {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -637,7 +660,6 @@ video::cue {
   margin-bottom: 0;
 }
 .directory-feature .directory-title,
-.directory-feature .faculty-feature .faculty-title,
 .directory-feature .testimoial-component .directory-title {
   font-weight: 500;
   color: #252525;
@@ -684,7 +706,8 @@ video::cue {
   background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
 }
-.media-text-component .category-title {
+
+.category-title {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
@@ -995,11 +1018,6 @@ video::cue {
   .testimonial-component .testimonial-border-grey {
     border-left: 1px solid #565656 !important;
   }
-  .history-carousel img {
-    width: 100%;
-    height: 50vw;
-    object-fit: cover;
-  }
   .inquiry-form-hero {
     background-image: "https://son-images.imgix.net/marketing/acceleratedstudents.jpg?q=30&auto=format";
     min-height: 75vh;
@@ -1265,6 +1283,11 @@ video::cue {
   }
   .marketing-hero-module .card {
     width: 100% !important;
+  }
+  .history-carousel img {
+    width: 100%;
+    height: 50vw;
+    object-fit: cover;
   }
 }
 @media (max-width: 991.98px) {

@@ -169,7 +169,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
     margin: 0;
     padding-top: 120px;
     padding-bottom: 80px;
-    background-color: #1b1c1e;
+    background-color: $color_charcoal;
     border: none;
 
     &-bg {
@@ -405,12 +405,12 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 }
 
 .hot-release {
-    display: flex;
-    flex-direction: column;
-    gap: 2.8%;
     margin-bottom: 25px;
 
     .hot-release-left {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8%;
         padding-right: 0;
         padding-left: 5px;
 
@@ -420,13 +420,20 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
         }
     }
 
-    .hot-release-right .release-thumb {
-        height: 47.5%;
+    .hot-release-right {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8%;
+
+        .release-thumb {
+            height: 47.5%;
+        }
     }
+
 }
 
 .release-thumb {
-    background-color: #1b1c1e;
+    background-color: $color_charcoal;
 
     .release-category span,
     &.page-header .release-category span {
@@ -463,7 +470,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
         padding: 5px 15px;
         border-radius: 5px;
         color: $color_white;
-        background-color: #686a6d;
+        background-color: $color_dark_gray;
         margin-right: 4px;
         margin-bottom: 6px;
         transition: 0.2s opacity;
@@ -558,8 +565,8 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 .newsletter-widget {
     position: relative;
     padding: 0 30px 30px;
-    border-left: 2px dashed #e8eaed;
-    border-right: 2px dashed #e8eaed;
+    border-left: 2px dashed $color_lighter_gray;
+    border-right: 2px dashed $color_lighter_gray;
 
     p {
         min-height: 68px;
@@ -577,12 +584,12 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
     }
 
     &:after {
-        font-family: "Font Awesome 6 Pro";
+        font-family: $font_awesome;
         position: absolute;
         bottom: -25px;
         right: 27px;
         font-size: 160px;
-        color: #e8eaed;
+        color: $color_lighter_gray;
         transform: rotate(13deg);
         z-index: -1;
         font-weight: 900;
@@ -593,7 +600,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 
     &:last-child {
     .newsletter-widget {
-        border-bottom: 2px dashed #e8eaed;
+        border-bottom: 2px dashed $color_lighter_gray;
     }
 }
 }
@@ -601,13 +608,13 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
     ul {
         li {
             padding: 15px 0;
-            border-bottom: 1px solid #e8eaed;
+            border-bottom: 1px solid $color_lighter_gray;
 
             a {
                 display: block;
                 text-transform: uppercase;
                 font-weight: 700;
-                color: #11151c;
+                color: $color_charcoal;
 
                 &:hover,
                 &:focus {
@@ -617,13 +624,19 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
                 span {
                     float: right;
                     font-size: 14px;
-                    color: #686a6d;
+                    color: $color_dark_gray;
                     margin-left: 15px;
                 }
             }
         }
     }
 }
+
+.newsroom-label{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+} 
 
 .contact {
      li {
@@ -642,7 +655,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
             height: 40px;
             background: $color_white;
             color: $color_interactive_blue;
-            border: 1px solid #e8eaed;
+            border: 1px solid $color_lighter_gray;
             line-height: 40px;
             border-radius: 50%;
         }
@@ -670,7 +683,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 
 #lw {
     width: 100%;
-    background-color: white;
+    background-color: $color_white;
     font-family: inherit !important;
     overflow: hidden;
 
@@ -681,7 +694,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 
     li.lwe {
         padding: 10px;
-        border-bottom: 1px dotted #ccc;
+        border-bottom: 1px dotted $color_medium_gray;
     }
 }
 
@@ -706,7 +719,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 }
 
 .lwn0 {
-    font-family: proxima-nova, Helvetica Neue, sans-serif !important;
+    font-family: $font_proxima !important;
     font-weight: normal;
     float: right !important;
     font-size: .85rem !important;
@@ -750,7 +763,7 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 
 .lwi {
     padding: 2px;
-    border: 1px solid #ccc;
+    border: 1px solid $color_medium_gray;
 }
 
 
@@ -822,7 +835,7 @@ $breakpoints: (
         width: 100%;
         height: 100%;
         margin-right: -100%;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid $color_medium_gray;
         margin-bottom: 7px;
         margin-left: 5px;
     }

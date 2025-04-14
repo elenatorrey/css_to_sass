@@ -421,6 +421,22 @@
 }
 
 /********************************************FOOTER*******************************************************/
+.footer-btn-section .footer-btn {
+  display: flex;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #283faf;
+  margin-bottom: 2px;
+  border: 1px solid #283faf;
+  cursor: pointer;
+}
+.footer-btn-section .footer-btn:hover {
+  color: #283faf;
+  background-color: #fff;
+}
+
 .footer-links .nav-item .nav-link {
   display: block;
   font-family: "proxima-nova", "Helvetica Neue", sans-serif;
@@ -631,8 +647,7 @@
     transform: scaleX(1);
   }
   #main-menu .nav-action:focus span::after,
-  #main-menu #main-menu .nav-action:hover span::after,
-  #main-menu #navSecondary .nav-action:hover span::after {
+  #main-menu #main-menu .nav-action:hover span::after {
     transform: scaleX(1);
     z-index: 10000;
   }
@@ -685,7 +700,6 @@
   .nav-secondary .navbar-nav .nav-link {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    text-transform: uppercase;
     display: flex;
   }
   .nav-secondary .navbar-collapse {
@@ -694,20 +708,24 @@
   .nav-secondary .navbar-collapse .navbar-nav {
     flex-flow: row wrap;
   }
-  .nav-secondary #navSecondary .navbar-nav .nav-item:not(:last-child) {
+  #navSecondary .nav-action:hover span::after {
+    transform: scaleX(1) !important;
+    z-index: 10000 !important;
+  }
+  #navSecondary .navbar-nav .nav-item:not(:last-child) {
     border-bottom: none;
   }
-  .nav-secondary #navSecondary .navbar-nav li:hover > .gg-chevron-down::after {
+  #navSecondary .navbar-nav li:hover > .gg-chevron-down::after {
     transform: rotate(225deg);
     transition: 0.2s;
     color: silver;
     top: 0.8rem;
   }
-  .nav-secondary #navSecondary .mega-content .link-section {
+  #navSecondary .mega-content .link-section {
     padding-top: 0 !important;
     width: fit-content;
   }
-  .nav-secondary #navSecondary .mega-content .list-group p {
+  #navSecondary .mega-content .list-group p {
     color: #000000 !important;
     display: flex;
     width: 100%;
@@ -716,7 +734,7 @@
     font-size: 1rem;
     opacity: 1;
   }
-  .nav-secondary #navSecondary .mega-content .list-group-item {
+  #navSecondary .mega-content .list-group-item {
     border: none;
     padding: 0.235rem 0;
     font-size: 0.973rem;
@@ -724,13 +742,13 @@
     font-weight: 600;
     width: max-content;
   }
-  .nav-secondary #navSecondary .mega-content:hover {
+  #navSecondary .mega-content:hover {
     color: #283faf;
   }
-  .nav-secondary #navSecondary .nav-item:not(.dropdown) .nav-action span {
+  #navSecondary .nav-item:not(.dropdown) .nav-action span {
     position: relative;
   }
-  .nav-secondary #navSecondary .nav-item:not(.dropdown) .nav-action span::before {
+  #navSecondary .nav-item:not(.dropdown) .nav-action span::before {
     content: " ";
     background: #283faf;
     position: absolute;
@@ -743,14 +761,15 @@
     transition: transform 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 50ms;
     z-index: 10000;
   }
-  .nav-secondary #navSecondary .nav-item:not(.dropdown):hover .nav-action span::before {
+  #navSecondary .nav-item:not(.dropdown):hover .nav-action span::before {
     transform: scaleX(1);
     z-index: 10000;
   }
-  .nav-secondary #navSecondary .dropdown-menu .nav-action span::after {
+  #navSecondary .dropdown-menu .nav-action span::after {
     background: #283faf;
     bottom: -1px;
     content: " ";
+    font-family: "Font Awesome 6 Pro";
     display: inline-block;
     height: 2px;
     left: 0;

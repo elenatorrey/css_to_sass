@@ -62,6 +62,3 @@ try {
     echo "❌ Exception: " . $e->getMessage();
 }
 ?>
-
-
-

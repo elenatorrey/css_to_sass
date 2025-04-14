@@ -53,7 +53,7 @@ $font_proxima: "proxima-nova", sans-serif;
 	opacity: 0;
 }
 
-/*********************************************ACCORDIONS test*********************************************/
+/*********************************************ACCORDIONS*********************************************/
 
 .accordion {
 	.accordion-item {
@@ -68,6 +68,36 @@ $font_proxima: "proxima-nova", sans-serif;
 				border-bottom: 3px solid $color_darker_gray;
 			}
 		}
+
+		&:first-of-type{
+			&>.accordion-header{
+				 .accordion-button {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+				 }
+		}
+	}
+
+	&:last-of-type{
+		&>.accordion-header{
+			.accordion-button {
+			&.collapsed{
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+	}
+}
+&:last-of-type {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+&:last-of-type{
+	&>.accordion-collapse{
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
 	}
 
 	.accordion-button {
@@ -264,36 +294,39 @@ a.card-link {
 
 .card-body {
 
-	.card-list-title,
-	.card-list-title-ext {
+	.card-list-title{
 		&:after {
-			@include icon-after("", $color_white, $font_awesome);
+			content: "\f061";
+			font-family: $font_awesome;
 			padding-left: 1em;
 			font-size: 0.75em;
-		}
-	}
-
-	.card-list-title {
-		&:after {
-			content: "";
-		}
-
-		&:hover {
 			color: $color_white;
-			opacity: 1;
-			transform: translateX(1.5rem);
+			font-weight: 900;
+			line-height: 1;
+		}
+			&:hover {
+				color: $color_white;
+				opacity: 1;
+				transform: translateX(0.5rem);
+				transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 		}
 	}
 
 	.card-list-title-ext {
 		&:after {
-			content: "";
+			content: "\f35d";
+			font-family: $font_awesome;
+			padding-left: 1em;
+			font-size: 0.75em;
+			color: $color_white;
+			font-weight: 900;
+			line-height: 1;
 		}
-
 		&:hover {
 			color: $color_white;
 			opacity: 1;
 			transform: translateX(1.5rem);
+			transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 		}
 	}
 }
@@ -542,9 +575,13 @@ video::cue {
 		&::before {
 			content: "" !important;
 		}
+		
 	}
-
-
+	 .directory-title {
+		font-weight: 500;
+		color: $color_charcoal;
+		font-size: 1rem;
+	}
 	.border-top-grey {
 		border-top: 1px solid #565656;
 	}
@@ -611,7 +648,10 @@ video::cue {
 		object-fit: cover;
 		object-position: 50% 0%;
 	}
+
 }
+
+
 
 /************************************************HISTORY PAGE CAROUSEL****************************************/
 
@@ -752,7 +792,15 @@ video::cue {
 	}
 }
 
-/************************************************DIRECTORY************************************************/
+/************************************************DIRECTORY and FACULTY Features************************************************/
+.faculty-feature .faculty-title,
+ {
+	font-weight: 500;
+	color: $color_charcoal;
+	font-size: 1rem;
+} 
+
+
 .directory-feature {
 	a {
 		text-overflow: ellipsis;
@@ -774,7 +822,6 @@ video::cue {
 	}
 
 	.directory-title,
-	.faculty-feature .faculty-title,
 	.testimoial-component .directory-title {
 		font-weight: 500;
 		color: $color_charcoal;
@@ -831,10 +878,11 @@ video::cue {
 		width: 100%;
 	}
 
-	.category-title {
-		font-size: 1.1rem;
-		text-transform: uppercase;
-	}
+}
+
+.category-title {
+	font-size: 1.1rem;
+	text-transform: uppercase;
 }
 
 /************************************************ MEDIA FEATURE************************************************/
@@ -1222,6 +1270,7 @@ $breakpoints: (
 	
 }
 
+
 @include media-breakpoint-up(md) {
 	.inquiry-form .card-img-top {
 		height: 20vw;
@@ -1237,11 +1286,6 @@ $breakpoints: (
 		}
 	}
 
-	.history-carousel img {
-        width: 100%;
-        height: 50vw;
-        object-fit: cover;
-   }
 
 	.inquiry-form-hero {
 		background-image:("https://son-images.imgix.net/marketing/acceleratedstudents.jpg?q=30&auto=format");
@@ -1309,7 +1353,7 @@ $breakpoints: (
 
 @include media-breakpoint-up(lg) {
 	.landing-hero {
-		img {
+		.hero-img {
 			position: absolute;
 		}
 
@@ -1600,6 +1644,12 @@ $breakpoints: (
 	.marketing-hero-module .card {
 		width: 100% !important;
 	}
+
+	.history-carousel img {
+        width: 100%;
+        height: 50vw;
+        object-fit: cover;
+   }
 
 }
 
