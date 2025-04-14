@@ -1,8 +1,9 @@
 @use "sass:map";
+@use "../node_modules/@univmarcomm/rochester-design-tokens/tokens/tokens";
 
 $color_charcoal: #252525;
 $color_white: #fff;
-$color_interactive_blue: #283faf;
+$color_interactive_blue: map.get(tokens.$tokens, "rochester", "color", "primary", "interactiveBlue");
 $color_black: #000;
 $color_rochester_blue: #00205b;
 $color_darker_gray: #565656;
@@ -14,23 +15,9 @@ $color_dandelion: #FFC70A;
 $background-transparent: transparent;
 $background-color_9: rgba(0, 0, 0, 0.6);
 
-// Font Variables
 $font_awesome: "Font Awesome 6 Pro";
 $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 
-@mixin button-style($bg-color, $text-color, $hover-bg-color, $hover-text-color) {
-	display: block;
-	background: $bg-color;
-	color: $text-color;
-	text-decoration: none;
-	font-weight: 900;
-	transition: 0.25s cubic-bezier(.66, -.39, .41, 1.35);
-
-	&:hover {
-		background: $hover-bg-color;
-		color: $hover-text-color;
-	}
-}
 
 @mixin icon-after($content, $color, $font-family) {
 	speak: none;
@@ -45,7 +32,6 @@ $font_proxima: "proxima-nova", "Helvetica Neue", sans-serif;
 	font-family: $font-family;
 	font-weight: 900;
 	content: $content;
-	opacity: 0;
 }
 
 /************************************************************************ Bootstrap overrides*****************************************************************/
@@ -305,96 +291,247 @@ h6, .h6 {
 
 /***************************************************LINKS**************************************************/
 
-%base-link {
+@mixin link-base ($color,$border_bottom) {
+    color: $color;
+    border-bottom: $border_bottom;
     text-decoration: none;
     font-weight: 700;
+    transition: all .15s ease-in-out;
+    width: auto;
+    display: inline-block;
+    line-height: 1;
+    height: auto;
+    cursor: pointer;
+    padding: 0.2rem 0 0.2rem 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: .015625rem;
+    transition: .35s cubic-bezier(.23,1,.32,1);
   }
 
-  %base-link-after {
-    @include icon-after("\f105", $color_charcoal, $font_awesome);
+  @mixin link-hover($color,$background,$border_bottom){
+    color: $color;
+    background: $background;
+    border-bottom: $border_bottom;
+    padding: 0.2rem 0.5rem;
+  }
+
+  @mixin link-after($content,$color) {
+    content: $content;
+    color: $color;
     position: relative;
     top: -1px;
     padding-left: 0.5rem;
     font-size: 0.75rem;
     transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    font-family: $font-awesome;
 }
 
-%link-styles {
-    @extend %base-link;
-    &:after {
-        @extend %base-link-after;
-    }
-    &:focus, &:hover {
-        padding: 0.2rem 0.5rem;
-    }
-}
 
 a {
     color: $color_charcoal;
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: 700;
 
     &:hover {
         color: $color_interactive_blue;
     }
 }
 
-.blue-link, .blue-link-ext {
-    @extend %link-styles;
-    color: $color_interactive_blue;
-    border-color: $color_interactive_blue;
+
+.blue{
+&-link, &-link-ext {
+    @include link-base($color_interactive_blue, 2px solid $color_interactive_blue);
+
+    &:hover {
+      @include link-hover ($color_white,$color_interactive_blue, 2px solid $color_interactive_blue);
+      &:after{
+        color: $color_white !important;
+      }
+    }
+
 }
 
-.yellow-link {
-    @extend %link-styles;
-    color: $color_rochester_blue;
-    border-color: $color_dandelion;
+&-link {
+  &:after{
+    @include link-after("\f061",$color_interactive_blue);
+  }
 }
 
-.white-link, .white-link-ext {
-    @extend %link-styles;
-    color: $color_white;
-    border-color: $color_white;
+&-link-ext {
+  &:after{
+    @include link-after("\f35d",$color_interactive_blue);
+  }
+}
 }
 
-.black-link, .black-link-ext {
-    @extend %link-styles;
-    color: $color_charcoal;
-    border-color: $color_charcoal;
-}
+.yellow{
+  &-link, &-link-ext {
+      @include link-base($color_charcoal, 2px solid $color_dandelion);
+  
+      &:hover {
+        @include link-hover ($color_charcoal,$color_dandelion, 2px solid $color_dandelion);
+        &:after{
+          color: $color_charcoal !important;
+        }
+      }
+  
+  }
+  
+  &-link {
+    &:after{
+      @include link-after("\f061",$color_dandelion);
+    }
+  }
+  
+  &-link-ext {
+    &:after{
+      @include link-after("\f35d",$color_dandelion);
+    }
+  }
+  
+  }
+
+  .white{
+    &-link, &-link-ext {
+        @include link-base($color_white, 2px solid $color_white);
+    
+        &:hover {
+          @include link-hover ($color_charcoal,$color_white, 2px solid $color_white);
+          &:after{
+            color: $color_charcoal !important;
+          }
+        }
+    
+    }
+    
+    &-link {
+      &:after{
+        @include link-after("\f061",$color_white);
+      }
+    }
+    
+    &-link-ext {
+      &:after{
+        @include link-after("\f35d",$color_white);
+      }
+    }
+    }
+
+
+    .black{
+      &-link, &-link-ext {
+          @include link-base($color_charcoal, 2px solid $color_charcoal);
+      
+          &:hover {
+            @include link-hover ($color_white,$color_charcoal, 2px solid $color_charcoal);
+            &:after{
+              color: $color_white !important;
+            }
+          }
+      
+      }
+      
+      &-link {
+        &:after{
+          @include link-after("\f061",$color_charcoal);
+        }
+      }
+      
+      &-link-ext {
+        &:after{
+          @include link-after("\f35d",$color_charcoal);
+        }
+      }
+      }
+  
+
 
 .link-ext, .link-pdf {
-    @extend %base-link;
+    text-decoration: none;
+    font-weight: 700;
     color: $color_charcoal;
     transition: color .25s linear;
     box-shadow: inset 0 -1px 0 0 $color_interactive_blue;
-    &:after {
-        content: "\f08e";
-    }
 }
 
-.link-pdf {&:after {content: "\f1c1";}}
+.link-ext {
+  &:after {
+    font-weight: 600;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    font-size: 0.9rem;
+    font-family: $font_awesome;
+      content: "\f08e";
+  }
+}
+
+.link-pdf {
+  &:after {
+    font-weight: 600;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    font-size: 0.9rem;
+  font-family: $font_awesome;
+  content: "\f1c1";
+}
+}
 
 .component {
     p a, 
     li a {
-      &:not(.black-link, .blue-link, .yellow-link, .white-link) {
+      &:not(
+        .breadcrumb-item, 
+        .black-link, 
+        .blue-link, 
+        .white-link, 
+        .yellow-link, 
+        .btn-blue, 
+        .btn-yellow, 
+        .btn-solid-blue,
+        .btn-solid-blue-ext, 
+        .btn-solid-yellow,
+        .btn-solid-yellow-ext, 
+        .btn-white, 
+        .btn-black, 
+        .black-link-ext, 
+        .blue-link-ext, 
+        .white-link-ext, 
+        .yellow-link-ext, 
+        .btn-blue-ext, 
+        .btn-yellow-ext, 
+        .btn-black-ext){
         color: $color_charcoal;
-        transition: color 0.25s linear;
-        @extend %base-link;
         box-shadow: inset 0 -1px 0 0 $color_interactive_blue;
+        transition: color 0.25s linear;
       }
   
       &:hover {
+        &:not(.breadcrumb-item, 
+        .black-link, .blue-link,
+         .white-link, 
+         .yellow-link, 
+         .btn-blue, 
+         .btn-yellow,
+         .btn-solid-blue,
+         .btn-solid-blue-ext,
+          .btn-solid-yellow,
+          .btn-solid-yellow-ext, 
+          .btn-white, .btn-black, 
+          .black-link-ext, 
+          .blue-link-ext,
+           .white-link-ext, 
+           .yellow-link-ext, 
+           .btn-blue-ext, 
+           .btn-yellow-ext,
+            .btn-black-ext){
         color: $color_interactive_blue;
         box-shadow: inset 0 -3px 0 0 $color_interactive_blue;
+        }
       }
     }
-  
-    .bg-blue {
-      p a {
-        color: $color_white !important;
-      }
-    }
+
+
   }
   
   .nav-link, 
@@ -413,13 +550,14 @@ a {
 
 /***************************************************BUTTONS**************************************************/
 
-%btn-base {
+@mixin btn-base($color,$border) {
+   color: $color;
+   border: $border;
     width: auto;
     display: inline-block;
     line-height: 1.75;
     cursor: pointer;
     text-decoration: none;
-    border: 0;
     padding: 0.375rem 0.8125rem;
     font-size: 1.125rem;
     font-weight: 700;
@@ -427,200 +565,166 @@ a {
     transition: 0.25s cubic-bezier(0.66, -0.39, 0.41, 1.35);
   }
   
-  %btn-base-after {
-    &:after {
-      @include icon-after("\f105", $color_charcoal, $font_awesome);
+  @mixin btn-after($content,$color) {
+      content: $content;
+      color: $color;
+      font-family: $font_awesome;
       position: relative;
       top: -1px;
       padding-left: 0.5rem;
       font-size: 0.75rem;
       transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-    }
   }
   
-  %btn-hover {
-    &:hover {
+  @mixin btn-hover($color,$background,$border) {
+      color: $color;
+      background: $background;
+      border: $border;
       padding: 0.375rem 1.3125rem;
-    }
+    
   }
-  
-  %btn-styles {
-    @extend %btn-base;
-    background: $background-transparent;
-  }
-  
-  .btn {
-    &-blue, &-blue-ext,
-    &-yellow, &-yellow-ext,
-    &-black, &-black-ext,
-    &-white, &-white-ext {
-      @extend %btn-styles;
-      @extend %btn-hover;
-    }
-  
+  .btn{
+
     &-blue, &-blue-ext {
-      border: 2px solid $color_interactive_blue;
-      color: $color_interactive_blue;
+      @include btn-base($color_interactive_blue, 2px solid $color_interactive_blue);
   
       &:hover {
-        color: $color_white !important;
-        background: $color_interactive_blue;
-        border-color: $color_interactive_blue;
-      }
-  
-      &:after {
-        @extend %btn-base-after;
-        color: $color_interactive_blue;
+        @include btn-hover ($color_white,$color_interactive_blue, 2px solid $color_interactive_blue);
+        &:after{
+          color: $color_white !important;
+        }
       }
     }
-  
-    &-yellow, &-yellow-ext {
-      border: 2px solid $color_dandelion;
-      color: $color_rochester_blue;
-  
-      &:hover {
-        color: $color_charcoal;
-        background: $color_dandelion;
-        border-color: $color_dandelion;
-      }
-    }
-  
-    &-black, &-black-ext {
-      border: 2px solid $color_charcoal;
-      color: $color_charcoal;
-  
-      &:hover {
-        color: $color_white !important;
-        background: $color_charcoal;
-        border-color: $color_charcoal;
-      }
-    }
-  
-    &-white, &-white-ext {
-      border: 2px solid $color_white;
-      color: $color_white;
-  
-      &:hover {
-        color: $color_charcoal !important;
-        background: $color_white;
-        border-color: $color_white;
-      }
-    }
-  }
-  
-  .btn-solid {
-    &-yellow, &-yellow-ext,
-    &-blue, &-blue-ext {
-      @extend %btn-base;
-      @extend %btn-hover;
-      transition: all 0.15s ease-in-out !important;
-    }
-  
-    &-yellow {
-      background: $color_dandelion;
-      color: $color_rochester_blue !important;
-  
-      &:hover {
-        background: $color_dandelion;
-        border-color: $color_dandelion;
-        color: $color_rochester_blue !important;
-      }
-    }
-  
-    &-blue, &-blue-ext {
-      background: $color_interactive_blue;
-      color: $color_white !important;
-  
-      &:hover {
-        background: $color_interactive_blue;
-        border-color: $color_interactive_blue;
-        color: $color_white !important;
-      }
-    }
-  }
-  
-  .btn {
+
     &-blue {
       &:after {
-        content: "\f061";
+        @include btn-after("\f061",$color_interactive_blue);
       }
     }
-  
+
     &-blue-ext {
       &:after {
-        content: "\f35d";
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-        font-size: 1rem;
+      @include btn-after("\f35d",$color_interactive_blue);
       }
     }
+
+    &-yellow, &-yellow-ext {
+      @include btn-base($color_charcoal, 2px solid $color_dandelion);
   
-    &-yellow, &-yellow-ext,
-    &-black, &-black-ext {
-      &:after {
-        @extend %btn-base-after;
-      }
-    }
-  
-    &-yellow {
-      &:after {
-        content: "\f061";
-        color: $color_rochester_blue;
-      }
-    }
-  
-    &-black {
-      &:after {
-        content: "\f061";
-        color: $color_charcoal;
-      }
-    }
-  
-    &-yellow-ext {
-      &:after {
-        content: "\f35d";
-        color: $color_rochester_blue;
-      }
-    }
-  
-    &-black-ext {
-      &:after {
-        content: "\f35d";
-        color: $color_charcoal;
-      }
-    }
-  
-    &-white {
-      &:after {
-        content: "\f061";
-        color: $color_white;
-      }
-    }
-  
-    &-white-ext {
-      &:after {
-        content: "\f35d";
-        color: $color_charcoal;
-      }
-    }
-  }
-  
-  .bg-blue {
-    .btn-white-ext, .white-link-ext {
-      &:after {
-        content: "\f35d";
-        color: $color_white;
-      }
-    }
-  
-    .btn-white-ext {
       &:hover {
-        color: $color_charcoal !important;
-        background: $color_white;
-        border-color: $color_white;
+        @include btn-hover ($color_charcoal,$color_dandelion,2px solid $color_dandelion);
+        &:after{
+          color: $color_charcoal !important;
+        }
       }
     }
+      &-yellow {
+        &:after {
+          @include btn-after("\f061",$color_charcoal);
+        }
+      }
+    
+      &-yellow-ext {
+        &:after {
+        @include btn-after("\f35d",$color_charcoal);
+        }
+      }
+
+      &-black, &-black-ext {
+        @include btn-base($color_charcoal, 2px solid $color_charcoal);
+    
+        &:hover {
+          @include btn-hover ($color_white,$color_charcoal,2px solid $color_charcoal);
+          &:after{
+            color: $color_white !important;
+          }
+        }
+      }
+        &-black {
+          &:after {
+            @include btn-after("\f061",$color_charcoal);
+          }
+        }
+      
+        &-black-ext {
+          &:after {
+          @include btn-after("\f35d",$color_charcoal);
+          }
+        }
+
+
+        &-white, &-white-ext {
+          @include btn-base($color_white, 2px solid $color_white);
+      
+          &:hover {
+            @include btn-hover ($color_charcoal,$color_white,2px solid $color_white);
+            &:after{
+              color: $color_charcoal !important;
+            }
+          }
+        }
+          &-white {
+            &:after {
+              @include btn-after("\f061",$color_white);
+            }
+          }
+        
+          &-white-ext {
+            &:after {
+            @include btn-after("\f35d",$color_white);
+            }
+          }
+        }
+
+
+  .btn-solid {
+      &-yellow, &-yellow-ext {
+        @include btn-base($color_charcoal, 2px solid $color_dandelion);
+        background: $color_dandelion;
+    
+        &:hover {
+          @include btn-hover ($color_charcoal,$color_dandelion,2px solid $color_dandelion);
+          &:after{
+            color: $color_charcoal !important;
+          }
+        }
+      }
+        &-yellow {
+          &:after {
+            @include btn-after("\f061",$color_charcoal);
+          }
+        }
+      
+        &-yellow-ext {
+          &:after {
+          @include btn-after("\f35d",$color_charcoal);
+          }
+        }
+
+      &-blue, &-blue-ext {
+        @include btn-base($color_white, 2px solid $color_interactive_blue);
+        background: $color_interactive_blue;
+    
+        &:hover {
+          @include btn-hover ($color_white, $color_interactive_blue,2px solid $color_interactive_blue);
+          &:after{
+            color: $color_white !important;
+          }
+        }
+      }
+        &-blue {
+          &:after {
+            @include btn-after("\f061",$color_white);
+          }
+        }
+      
+        &-blue-ext {
+          &:after {
+          @include btn-after("\f35d",$color_white);
+          }
+        }
   }
+  
   
   .btn-section {
     height: 45vh;
@@ -709,16 +813,36 @@ a {
   
     &-blue {
       a {
-        &:not(.btn-white, .btn-solid-blue-ext) {
+        &:not(.btn-black, .btn-black-ext, .btn-white, .btn-white-ext, .btn-yellow, .btn-yellow-ext, .btn-blue, .btn-blue-ext, .btn-solid-blue-ext, .btn-solid-blue,.btn-solid-yellow-ext,.btn-solid-yellow, .yellow-link, .yellow-link-ext) {
           color: $color_white !important;
           box-shadow: inset 0 -1px 0 0 $color_white !important;
         }
   
-        &:hover {
+        &:not(.btn-black, .btn-black-ext, .white-link, .btn-white, .btn-white-ext, .btn-yellow, .btn-yellow-ext, .btn-blue, .btn-blue-ext, .btn-solid-blue-ext, .btn-solid-blue,.btn-solid-yellow-ext,.btn-solid-yellow, .yellow-link, .yellow-link-ext):hover {
           color: $color_lighter_gray !important;
           box-shadow: inset 0 -3px 0 0 $color_lighter_gray !important;
         }
       }
+        p{ 
+          a {
+            &:not(.btn-black, .btn-black-ext, .btn-yellow, .btn-yellow-ext, .btn-blue, .btn-blue-ext, .btn-solid-blue-ext, .btn-solid-blue,.btn-solid-yellow-ext,.btn-solid-yellow, .yellow-link, .yellow-link-ext){
+          color: $color_white !important;
+            }
+        }
+      }
+    .btn-white-ext, .white-link-ext {
+      &:after {
+        @include btn-after("\f35d",$color_white);
+      }
+    }
+    .white-link, .white-link-ext, .btn-white,.btn-white-ext {
+      &:focus, &:hover {
+        color: $color_charcoal !important;
+        background: $color_white;
+        border-color: $color_white;
+      }
+    }
+
     }
   }
   
@@ -784,6 +908,13 @@ a {
         height: 100%;
         fill: currentColor;
     }
+    &--Logo{
+      padding-bottom: 22.94618%;
+    }
+}
+
+svg {
+  fill: currentColor;
 }
 
 /*************************************************SIDEBAR************************************************/
@@ -819,7 +950,7 @@ a {
 
 
 /*************************************************BREADCRUMBS************************************************/
-.breadcrumbs {
+.breadcrumb {
     font-family: $font_proxima;
     font-size: 0.9375rem;
     color: $color_dark_gray;
@@ -845,11 +976,8 @@ a {
         text-decoration: none;
         min-height: 2.75rem;
         min-width: 2.75rem;
-
-        span {
-            border-bottom: 1.5px solid $color_interactive_blue;
-            margin: 0 auto 1rem;
-        }
+        border-bottom: 1.5px solid $color_interactive_blue;
+        margin: 0 auto 1rem;
 
         &:hover {
             color: $color_interactive_blue !important;
@@ -862,7 +990,7 @@ a {
     padding-left: 0;
 }
 
-.breadcrumb {
+.breadcrumb-item {
     margin-bottom: 0 !important;
 }
 
@@ -1288,7 +1416,7 @@ $breakpoints: (
       width: 100% !important;
     }
   
-    .breadcrumbs li {
+    .breadcrumb li {
       font-size: 0.8rem;
       margin: 0 0;
     }
@@ -1358,10 +1486,6 @@ $breakpoints: (
       text-rendering: optimizeLegibility;
     }
   
-    .full-width-content .full-width-paragraph {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
   }
   
   @include media-breakpoint-down(sm) {
