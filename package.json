@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "@univmarcomm/rochester-design-tokens": "^0.3.0"
+  },
+  "devDependencies": {
+    "sass": "^1.83.4"
+  },
+  "scripts": {
+    "css": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens custom/custom.scss:custom/custom.css menu/menu.scss:menu/menu.css newsroom/newsroom.scss:newsroom/newsroom.css components/components.scss:components/components.css --no-source-map --style=compressed"
   }
 }

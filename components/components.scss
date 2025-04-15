@@ -1,27 +1,7 @@
+// @use "../node_modules/@univmarcomm/rochester-design-tokens/tokens/tokens.scss";
+@use "../globals" as *;
 @use "sass:map";
 
-$color_charcoal: #252525;
-$color_white: #fff;
-$color_interactive_blue: #283faf;
-$color_black: #000;
-$color_rochester_blue: #00205b;
-$color_darker_gray: #565656;
-$color_lighter_gray: #F4F4F4;
-$color_dark_gray: #787878;
-$background-transparent: transparent;
-$background-color_blue: #283FAF;
-$background-color_lighter_gray: #f4f4f4;
-$background-color_white: #fff;
-$background_dandelion: #FFC70A;
-$background_black: #000;
-$background-color_8: rgba(255, 255, 255, 0.7);
-$background-color_9: rgba(0, 0, 0, 0.6);
-$background-color_10: rgba(255, 255, 255, 0.85);
-$background-color_11: rgba(33, 33, 33, 0.5);
-
-// Font Variables
-$font_awesome: "Font Awesome 6 Pro";
-$font_proxima: "proxima-nova", sans-serif;
 
 @mixin button-style($bg-color, $text-color, $hover-bg-color, $hover-text-color) {
 	display: block;
@@ -455,7 +435,7 @@ video::cue {
 }
 
 .learn-more-btn-yellow {
-	@include button-style($background_dandelion, $color_black, $background_dandelion, $color_black);
+	@include button-style($color_dandelion, $color_black, $color_dandelion, $color_black);
 	padding: 5px;
 	float: left;
 	margin: 1rem 0;
@@ -542,7 +522,7 @@ video::cue {
 			margin: 1rem 0 0 0.3rem;
 
 			button {
-				background-color: $background_dandelion;
+				background-color: $color_dandelion;
 			}
 		}
 	}
@@ -715,7 +695,7 @@ video::cue {
 				margin: auto;
 				width: 60px;
 				height: 4px;
-				background-color: $background_dandelion;
+				background-color: $color_dandelion;
 				display: block;
 				margin-top: 10px;
 				margin-bottom: 10px;
@@ -863,7 +843,7 @@ video::cue {
 			left: 0;
 			width: 79px;
 			height: 5px;
-			background-color: $background_dandelion;
+			background-color: $color_dandelion;
 			display: block;
 			margin-top: 8px;
 		}
@@ -1049,7 +1029,7 @@ video::cue {
 	}
 
 	.card {
-		background-color: $background-color_white;
+		background-color: $color_white;
 		border-radius: 10px;
 		box-shadow: 0 10px 20px -6px rgba(6, 14, 58, 0.1);
 		position: relative;
@@ -1092,7 +1072,7 @@ video::cue {
 				font-family: $font_proxima;
 				width: fit-content;
 				color: $color_dark_gray;
-				background-color: $background_dandelion;
+				background-color: $color_dandelion;
 				border-radius: 0;
 				padding: 0 0.5rem;
 				text-transform: uppercase;
@@ -1260,7 +1240,7 @@ $breakpoints: (
 		}
 
 		.bg-yellow {
-			box-shadow: -15px 0 0 $background_dandelion, 15px 0 0 $background_dandelion;
+			box-shadow: -15px 0 0 $color_dandelion, 15px 0 0 $color_dandelion;
 		}
 	}
 
