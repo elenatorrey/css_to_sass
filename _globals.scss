@@ -8,7 +8,7 @@ $color_darker_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "
 $color_light_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "lightGray", "$value");
 $color_lighter_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "lighterGray", "$value");
 $color_dark_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "darkGray", "$value");
-$color_medium_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "darkerGray", "$value");
+$color_medium_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "mediumGray", "$value");
 $color_dandelion: map.get(tokens.$tokens, "rochester", "color", "primary", "dandelionYellow", "$value");
 $color_white: map.get(tokens.$tokens, "rochester", "color", "secondary", "white", "$value");
 $background-transparent: transparent;
