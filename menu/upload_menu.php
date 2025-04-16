@@ -15,7 +15,7 @@ $auth = array(
 
 
 // File Details
-$siteName = "SON-sandbox";           // Replace with the exact site name
+$siteName = "SON";           // Replace with the exact site name
 $cssFilePath = "/assets/css/menu.css"; // Path to the CSS file in Cascade CMS
 $localCssPath = "menu.css";  // Path to the local CSS file
 
