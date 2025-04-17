@@ -8,6 +8,7 @@ This codebase supports the School of Nursing web styling workflow using modular 
 
 The project folder structure is as follows:
 
+```
 son_css/
 ├── components/
 │   ├── components.scss
@@ -35,6 +36,7 @@ son_css/
 ├── .npmrc
 ├── package.json
 └── package-lock.json
+```
 
 ## Installation
 
