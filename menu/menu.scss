@@ -1,5 +1,5 @@
 // @use "../node_modules/@univmarcomm/rochester-design-tokens/tokens/tokens.scss";
-@use "../globals" as *;
+@use "../_variables" as *;
 @use "sass:map";
 
 
@@ -83,6 +83,7 @@
     height: 2.75rem;
     border: none;
 }
+
 
 .navbar-toggler {
     border: none;
@@ -398,6 +399,14 @@
 
         &:hover {
             color: $color_white !important;
+        }
+        .header__search--icon2 {
+            display: block;
+            color: #fff;
+            width: 1.2rem;
+            position: absolute;
+            top: 15px;
+            left: 22px;
         }
     }
 

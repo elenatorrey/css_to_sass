@@ -1,5 +1,5 @@
 // @use "../node_modules/@univmarcomm/rochester-design-tokens/tokens/tokens.scss";
-@use "../globals" as *;
+@use "../_variables" as *;
 @use "sass:map";
 
 
@@ -1111,6 +1111,11 @@ svg {
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.5;
+
+      &-lg {
+          border-radius: 0 !important;
+          padding: 1rem 0.75rem;
+      }
     }
   
     &-label {

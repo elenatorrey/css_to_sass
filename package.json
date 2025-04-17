@@ -6,6 +6,21 @@
     "sass": "^1.83.4"
   },
   "scripts": {
-    "css": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens custom/custom.scss:custom/custom.css menu/menu.scss:menu/menu.css newsroom/newsroom.scss:newsroom/newsroom.css components/components.scss:components/components.css --no-source-map --style=compressed"
+    "compile_components": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens components/components.scss:components/components.css --style=compressed",
+    "compile_custom": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens custom/custom.scss:custom/custom.css --style=compressed",
+    "compile_menu": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens menu/menu.scss:menu/menu.css --style=compressed",
+    "compile_newsroom": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens newsroom/newsroom.scss:newsroom/newsroom.css --style=compressed",
+    "upload_components": "php components/upload_components.php",
+    "upload_custom": "php components/upload_custom.php",
+    "upload_menu": "php components/upload_menu.php",
+    "upload_newsroom": "php components/upload_newsroom.php",
+    "compile_upload_components": "npm run compile_components && npm run upload_components",
+    "compile_upload_custom": "npm run compile_custom && npm run upload_custom",
+    "compile_upload_menu": "npm run compile_menu && npm run upload_menu",
+    "compile_upload_newsroom": "npm run compile_newsroom && npm run upload_newsroom",
+    "publish_components": "php components/publish_components.php",
+    "publish_custom": "php components/publish_custom.php",
+    "publish_menu": "php components/publish_menu.php",
+    "publish_newsroom": "php components/publish_newsroom.php"
   }
 }
