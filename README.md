@@ -46,7 +46,9 @@ Make sure you have Node.js and PHP installed on your system.
 
 Run the following command to install dependencies:
 
+```
 npm install
+```
 
 ## Usage
 
@@ -56,32 +58,40 @@ Each folder (components, custom, menu, newsroom) contains its own .scss file, wh
 
 Use the following npm scripts to compile individual Sass files:
 
+```
 npm run compile_components
 npm run compile_custom
 npm run compile_menu
 npm run compile_newsroom
+```
 
 ## Upload to Cascade
 
 To upload the compiled CSS files using the PHP upload scripts:
 
+```
 npm run upload_components
 npm run upload_custom
 npm run upload_menu
 npm run upload_newsroom
+```
 
 ## Compile and Upload (combined)
 
+```
 npm run compile_upload_components
 npm run compile_upload_custom
 npm run compile_upload_menu
 npm run compile_upload_newsroom
+```
 
 ## Publish
 
 Once uploaded, run the corresponding publish script:
 
+```
 npm run publish_components
 npm run publish_custom
 npm run publish_menu
 npm run publish_newsroom
+```
