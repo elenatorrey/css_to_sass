@@ -10,7 +10,7 @@ $auth = array(
 // File Details
 $siteName = "SON-sandbox";           // Replace with the exact site name
 $cssFilePath = "/assets/css/components.css"; // Path to the CSS file in Cascade CMS
-$localCssPath = "components.css";  // Path to the local CSS file
+$localCssPath = "/components.css";  // Path to the local CSS file
 $fileId = "15228444ac1904766a0632aebead830b";          // If you prefer using ID instead of path
 
 try {
@@ -34,7 +34,7 @@ try {
 
         $fileAsset = $readResponse->readReturn->asset->file;
 
-        $fileAsset->text = file_get_contents($localCssPath);
+        $fileAsset->text = file_get_contents(__DIR__ . $localCssPath);
 
         $editParams = array(
             'authentication' => $auth,

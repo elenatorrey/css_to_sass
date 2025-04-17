@@ -1,7 +1,7 @@
-// @use "../node_modules/@univmarcomm/rochester-design-tokens/tokens/tokens.scss";
-@use "../globals" as *;
-@use "sass:map";
 
+@use "../_variables" as *;
+@use "sass:map";
+//  test
 
 @mixin button-style($bg-color, $text-color, $hover-bg-color, $hover-text-color) {
 	display: block;
@@ -773,7 +773,7 @@ video::cue {
 }
 
 /************************************************DIRECTORY and FACULTY Features************************************************/
-.faculty-feature .faculty-title,
+.faculty-feature .faculty-title
  {
 	font-weight: 500;
 	color: $color_charcoal;
