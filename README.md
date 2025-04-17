@@ -1,4 +1,4 @@
-## School of Nursing Codebase
+## School of Nursing Website
 
 Description
 
@@ -40,15 +40,32 @@ son_css/
 
 ## Installation
 
-Clone this repository.
+Clone this repository. Replace <your-username>:YOUR_TOKEN_HERE with your gitlab username and access token(Edit Profile -> Access Tokens)
+```
+git clone https://<your-username>:YOUR_TOKEN_HERE@git.its.rochester.edu/Elena_Torrey/school-of-nursing-website.git
+```
 
 Make sure you have Node.js and PHP installed on your system.
+Confirm installation: 
+```
+node -v
+npm -v
+```
 
-Run the following command to install dependencies:
+Run the following command to install dependencies (sass and University design tokens):
 
 ```
 npm install
 ```
+Ensure you have PHP installed (required for uploading/publishing compiled CSS via scripts).
+``` 
+php -v
+```
+If not installed: 
+```
+brew install php
+```
+
 
 ## Usage
 
