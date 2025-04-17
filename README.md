@@ -40,7 +40,7 @@ son_css/
 
 ## Installation
 
-Clone this repository. Replace <your-username> and YOUR_TOKEN_HERE with your gitlab username and access token(Edit Profile -> Access Tokens)
+Clone this repository. Replace your-username and YOUR_TOKEN_HERE with your gitlab username and access token(Edit Profile -> Access Tokens)
 ```
 git clone https://<your-username>:YOUR_TOKEN_HERE@git.its.rochester.edu/Elena_Torrey/school-of-nursing-website.git
 ```
