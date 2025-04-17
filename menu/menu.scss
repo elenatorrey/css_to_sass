@@ -405,7 +405,7 @@
             color: #fff;
             width: 1.2rem;
             position: absolute;
-            top: 15px;
+            top: 20px;
             left: 22px;
         }
     }
@@ -426,6 +426,13 @@
             border-width: 3px;
         }
     }
+    .form-control::placeholder {
+        color: silver;
+        opacity: 1;
+        background: #8788832e;
+        font-weight: 700;
+        letter-spacing: 0.01563rem;
+   }
 }
 
 

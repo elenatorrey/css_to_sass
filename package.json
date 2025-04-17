@@ -11,16 +11,16 @@
     "compile_menu": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens menu/menu.scss:menu/menu.css --style=compressed",
     "compile_newsroom": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens newsroom/newsroom.scss:newsroom/newsroom.css --style=compressed",
     "upload_components": "php components/upload_components.php",
-    "upload_custom": "php components/upload_custom.php",
-    "upload_menu": "php components/upload_menu.php",
-    "upload_newsroom": "php components/upload_newsroom.php",
+    "upload_custom": "php custom/upload_custom.php",
+    "upload_menu": "php menu/upload_menu.php",
+    "upload_newsroom": "php newsroom/upload_newsroom.php",
     "compile_upload_components": "npm run compile_components && npm run upload_components",
     "compile_upload_custom": "npm run compile_custom && npm run upload_custom",
     "compile_upload_menu": "npm run compile_menu && npm run upload_menu",
     "compile_upload_newsroom": "npm run compile_newsroom && npm run upload_newsroom",
     "publish_components": "php components/publish_components.php",
-    "publish_custom": "php components/publish_custom.php",
-    "publish_menu": "php components/publish_menu.php",
-    "publish_newsroom": "php components/publish_newsroom.php"
+    "publish_custom": "php custom/publish_custom.php",
+    "publish_menu": "php menu/publish_menu.php",
+    "publish_newsroom": "php newsroom/publish_newsroom.php"
   }
 }

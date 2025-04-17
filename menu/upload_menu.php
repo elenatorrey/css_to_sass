@@ -17,7 +17,7 @@ $auth = array(
 // File Details
 $siteName = "SON";           // Replace with the exact site name
 $cssFilePath = "/assets/css/menu.css"; // Path to the CSS file in Cascade CMS
-$localCssPath = "menu.css";  // Path to the local CSS file
+$localCssPath = "/menu.css";  // Path to the local CSS file
 
 try {
  
@@ -38,7 +38,7 @@ try {
         $fileAsset = $readResponse->readReturn->asset->file;
 
 
-        $encodedData = file_get_contents($localCssPath);
+        $encodedData = file_get_contents(__DIR__ . $localCssPath);
 
         $fileAsset->text = $encodedData;
      
