@@ -810,7 +810,7 @@ a {
       }
         p{ 
           a {
-            &:not(.btn-black, .btn-black-ext, .btn-yellow, .btn-yellow-ext, .btn-blue, .btn-blue-ext, .btn-solid-blue-ext, .btn-solid-blue,.btn-solid-yellow-ext,.btn-solid-yellow, .yellow-link, .yellow-link-ext){
+            &:not(.btn-black, .btn-white, .btn-black-ext, .btn-yellow, .btn-yellow-ext, .btn-blue, .btn-blue-ext, .btn-solid-blue-ext, .btn-solid-blue,.btn-solid-yellow-ext,.btn-solid-yellow, .yellow-link, .yellow-link-ext){
           color: $color_white !important;
             }
         }
