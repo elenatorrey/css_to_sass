@@ -833,7 +833,7 @@ $breakpoints: (
                 transform-origin: left center;
                 transition: transform 0.3s cubic-bezier(.45, .05, .55, .95) 50ms;
                 width: 100%;
-                z-index: 10000;
+                z-index: 1000;
             }
         }
 
@@ -860,7 +860,7 @@ $breakpoints: (
               span {
                 &::after {
                   transform: scaleX(1);
-                  z-index: 10000;
+                  z-index: 1000;
                 }
               }
             }
@@ -872,7 +872,7 @@ $breakpoints: (
                 span {
                   &::after {
                     transform: scaleX(1);
-                    z-index: 10000;
+                    z-index: 1000;
                   }
                 }
               }
@@ -1044,7 +1044,7 @@ $breakpoints: (
              transform-origin: left center;
              transition: transform 0.3s cubic-bezier(.45, .05, .55, .95) 50ms;
              width: 100%;
-             z-index: 10000;
+             z-index: 1000;
            }
          }
          

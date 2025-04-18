@@ -667,7 +667,7 @@
     transform-origin: left center;
     transition: transform 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 50ms;
     width: 100%;
-    z-index: 10000;
+    z-index: 1000;
   }
   #main-menu .active span::after {
     transform: scaleX(1);
@@ -677,11 +677,11 @@
   }
   #main-menu .nav-action:focus span::after {
     transform: scaleX(1);
-    z-index: 10000;
+    z-index: 1000;
   }
   #main-menu .nav-action:hover span::after {
     transform: scaleX(1);
-    z-index: 10000;
+    z-index: 1000;
   }
   #main-menu .btn-primary-menu {
     font-size: 12px !important;
@@ -811,7 +811,7 @@
     transform-origin: left center;
     transition: transform 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 50ms;
     width: 100%;
-    z-index: 10000;
+    z-index: 1000;
   }
   .dropdown-menu,
   .list-group-item {

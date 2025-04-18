@@ -988,6 +988,134 @@ svg {
   fill: currentColor;
 }
 
+.svgstore--Arrow_Circle {
+  padding-bottom: 100%;
+}
+
+.svgstore--Arrow_Up_Filled {
+  padding-bottom: 100%;
+}
+
+.svgstore--Awards_Appointment {
+  padding-bottom: 147.36842%;
+}
+
+.svgstore--Awards_Awards {
+  padding-bottom: 98.66667%;
+}
+
+.svgstore--Awards_Presentation {
+  padding-bottom: 100%;
+}
+
+.svgstore--Awards_ResearchFindings {
+  padding-bottom: 105.55556%;
+}
+
+.svgstore--Calendar {
+  padding-bottom: 111.11111%;
+}
+
+.svgstore--Carrot {
+  padding-bottom: 50%;
+}
+
+.svgstore--Carrot_Line {
+  padding-bottom: 66.66667%;
+}
+
+.svgstore--Close {
+  padding-bottom: 100%;
+}
+
+.svgstore--Document {
+  padding-bottom: 138.46154%;
+}
+
+.svgstore--Expand_Image {
+  padding-bottom: 100%;
+}
+
+.svgstore--Facebook {
+  padding-bottom: 110.52632%;
+}
+
+.svgstore--Line_Drawing_Calendar {
+  padding-bottom: 100%;
+}
+
+.svgstore--Line_Drawing_Coins {
+  padding-bottom: 100%;
+}
+
+.svgstore--Line_Drawing_Graduate {
+  padding-bottom: 100%;
+}
+
+.svgstore--Line_Drawing_Watch {
+  padding-bottom: 159.09091%;
+}
+
+.svgstore--Logo {
+  padding-bottom: 22.94618%;
+}
+
+.svgstore--Page {
+  padding-bottom: 129.16667%;
+}
+
+.svgstore--Print {
+  padding-bottom: 100%;
+}
+
+.svgstore--Quotation_Close, .svgstore--Quotation_Open {
+  padding-bottom: 87.5%;
+}
+
+.svgstore--Search {
+  padding-bottom: 100%;
+}
+
+.svgstore--Search_Close {
+  padding-bottom: 100%;
+}
+
+.svgstore--Menu {
+  padding-bottom: 100%;
+}
+
+.svgstore--Social_IG {
+  padding-bottom: 100%;
+}
+
+.svgstore--Social_LinkedIn {
+  padding-bottom: 91.66667%;
+}
+
+.svgstore--Social_Share_Button_email, .svgstore--Social_Share_Button_fb, .svgstore--Social_Share_Button_Twitter {
+  padding-bottom: 100%;
+}
+
+.svgstore--Social_Twitter {
+  padding-bottom: 85.71429%;
+}
+
+.svgstore--Social_Youtube {
+  padding-bottom: 73.33333%;
+}
+
+.svgstore--Social_fb {
+  padding-bottom: 100%;
+}
+
+.svgstore--Swoosh {
+  padding-bottom: 9.65278%;
+}
+
+.svgstore--Video_Play {
+  padding-bottom: 129.41176%;
+}
+
 /*************************************************SIDEBAR************************************************/
 .sidebar-link {
   border-top: 1px solid hsl(0, 0%, 90.6%);
