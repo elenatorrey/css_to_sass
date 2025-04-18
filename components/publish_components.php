@@ -8,7 +8,7 @@ $auth = array(
 );
 
 // File Details
-$siteName = "SON-sandbox";           // Replace with the exact site name
+$siteName = "SON";           // Replace with the exact site name
 $cssFilePath = "/assets/css/components.css"; // Path to the CSS file in Cascade CMS
 $localCssPath = "components.css";  // Path to the local CSS file
 $fileId = "15228444ac1904766a0632aebead830b";          // If you prefer using ID instead of path
@@ -24,7 +24,7 @@ $fileId = "15228444ac1904766a0632aebead830b";          // If you prefer using ID
 
     $destinationIdentifier = array(
 	// ID or path of the destination
-	'id' => '420398edac19047648ae545a5873e375',
+	'id' => '2b49da0eac19047656deb75d843eeb33',
 	'type' => 'destination'
     );
 
