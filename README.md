@@ -112,3 +112,34 @@ npm run publish_custom
 npm run publish_menu
 npm run publish_newsroom
 ```
+
+## Git Workflow for Syncing Projects
+
+1. Pull the latest changes (every time before working)
+```
+git pull origin main
+```
+
+2. Make your changes locally.
+
+3. Stage your changes
+```
+git add .
+```
+
+Or, specific files:
+```
+git add components/components.scss custom/custom.scss
+```
+
+4. Commit your changes. Add a clear message describing what you did:
+```
+git commit -m "Updated menu styling"
+```
+
+5.Push your changes back to GitLab
+```
+git push origin main
+```
+
+**Always make sure to pull before you push, especially if it's been a while since your last update.**
