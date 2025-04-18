@@ -2,6 +2,9 @@
 .accordion .accordion-item {
   border: none;
 }
+.accordion .accordion-item:focus(.collapsed) {
+  outline: 0;
+}
 .accordion .accordion-item:last-child {
   border-bottom: 3px solid #e7e7e7;
 }
@@ -203,7 +206,7 @@ a.card-link {
 .card-body .card-list-title:hover {
   color: hsl(0, 0%, 100%);
   opacity: 1;
-  transform: translateX(0.5rem);
+  padding-left: 1rem;
   transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .card-body .card-list-title-ext:after {
@@ -218,7 +221,7 @@ a.card-link {
 .card-body .card-list-title-ext:hover {
   color: hsl(0, 0%, 100%);
   opacity: 1;
-  transform: translateX(1.5rem);
+  padding-left: 1rem;
   transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
