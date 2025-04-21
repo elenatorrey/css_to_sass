@@ -66,6 +66,20 @@ If not installed:
 brew install php
 ```
 
+## API Key Setup
+To upload or publish files to Cascade, you must set your own API key.
+
+1. If it doesn't already exist, create a config.php file in the root of your project. Paste this in config.php: 
+```
+<?php
+return [
+    'cascade_api_key' => 'your-real-api-key-here'
+];
+?>
+```
+To get an API key, click the dropdown next to your avatar in the upper-right corner in Cascade. Select "API Key" from the menu, then click the "generate" link to create a new key.
+
+2. Check if you have .gitignore file in the root folder of your project and it contains the config.php file. This protects your personal key from being shared.
 
 ## Usage
 
@@ -144,17 +158,3 @@ git push origin main
 
 **Always make sure to pull before you push, especially if it's been a while since your last update.**
 
-## API Key Setup
-To upload or publish files to Cascade, you must set your own API key.
-
-1. If it doesn't already exist, create a config.php file in the root your project. Paste this in config.php: 
-```
-<?php
-return [
-    'cascade_api_key' => 'your-real-api-key-here'
-];
-?>
-```
-To get an API key, click the dropdown next to your avatar in the upper-right corner in Cascade. Select "API Key" from the menu, then click the "generate" link to create a new key.
-
-2. Check if you have .gitignore file in the root folder of your project and it contains the config.php file. This protects your personal key from being shared.
