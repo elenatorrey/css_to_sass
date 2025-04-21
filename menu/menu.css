@@ -108,6 +108,21 @@
   border-radius: 0;
   margin-top: 1rem !important;
 }
+#main-menu .btn-primary-menu {
+  display: flex;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: hsl(230, 62.8%, 42.2%);
+  margin-bottom: 2px;
+  border: 1px solid hsl(230, 62.8%, 42.2%);
+  cursor: pointer;
+}
+#main-menu .btn-primary-menu:hover {
+  color: #283faf !important;
+  background-color: #fff !important;
+}
 
 .menu-info-for .menu-info-for-item {
   border: none !important;

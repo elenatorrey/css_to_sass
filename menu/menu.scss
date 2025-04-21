@@ -152,6 +152,24 @@
         border-radius: 0;
         margin-top: 1rem !important;
     }
+
+    .btn-primary-menu {
+        display: flex;
+        padding: 0 1.25rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: $color_interactive_blue;
+        margin-bottom: 2px;
+        border: 1px solid $color_interactive_blue;
+        cursor: pointer;
+
+        &:hover{
+            color: #283faf !important;
+            background-color: #fff !important;
+        }
+}
+
 }
 
 .menu-info-for .menu-info-for-item {
