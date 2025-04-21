@@ -155,5 +155,6 @@ return [
 ];
 ?>
 ```
+To get an API key, click the dropdown next to your avatar in the upper-right corner in Cascade. Select "API Key" from the menu, then click the "generate" link to create a new key.
 
 2. Check if you have .gitignore file in the root folder of your project and it contains the config.php file. This protects your personal key from being shared.
