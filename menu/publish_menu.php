@@ -1,10 +1,11 @@
 <?php
 // Cascade CMS SOAP WSDL URL
 $soapURL = "https://its-wcms-up01.its.rochester.edu:8443/ws/services/AssetOperationService?wsdl";
-
+$config = include(__DIR__ . '/../config.php');
+$apiKey = $config['cascade_api_key'];
 // Authentication Details
 $auth = array(
-    'apiKey'   => 'c58322bf-0b6d-4156-a316-3c7b084a62dc'      // Replace with your API key
+    'apiKey'   => $apiKey    // Replace with your API key
 );
 
 // File Details

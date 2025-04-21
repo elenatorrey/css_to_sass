@@ -7,10 +7,11 @@ $client = new SoapClient
 	$soapURL, 
 	array ('trace' => 1, 'location' => str_replace('?wsdl', '', $soapURL)) 
 );
-
+$config = include(__DIR__ . '/../config.php');
+$apiKey = $config['cascade_api_key'];
 // Authentication Details
 $auth = array(
-    'apiKey'   => 'c58322bf-0b6d-4156-a316-3c7b084a62dc'      // Replace with your API key
+    'apiKey'   => $apiKey    // Replace with your API key
 );
 
 
