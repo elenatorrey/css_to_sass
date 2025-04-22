@@ -868,15 +868,12 @@ video::cue {
 /************************************************ MEDIA FEATURE************************************************/
 .media-feature-component {
 	.media-feature-wrap {
-		position: relative;
-		height: 40rem;
 
 		h2 {
 			font-weight: 600;
 		}
 
 		.play-pause-icon {
-			position: absolute;
 			z-index: 1;
 			opacity: 0.65;
 			transition: .3s;
@@ -886,11 +883,13 @@ video::cue {
 			left: 85% !important;
 		}
 
+		.media-feature-wrap-right {
+			padding: 2rem;
+			margin-top: -0.5rem;
+		}
+
 		.media-feature-wrap-left {
-			height: 80%;
 			z-index: 1000;
-			width: 50%;
-			float: left;
 			margin-top: 4%;
 			overflow: hidden;
 
@@ -898,11 +897,6 @@ video::cue {
 				height: 100%;
 				width: 100%;
 			}
-		}
-
-		.video-wrap {
-			position: relative;
-			z-index: 1000;
 		}
 	}
 }
@@ -1243,6 +1237,40 @@ $breakpoints: (
 
 
 @include media-breakpoint-up(md) {
+
+	.media-feature-component {
+		.media-feature-wrap {
+			position: relative;
+			height: 40rem;
+	
+			.play-pause-icon {
+				position: absolute;
+				left: 85% !important;
+			}
+	
+			.media-feature-wrap-left {
+				height: 80%;
+				width: 55%;
+				float: left;
+				margin-top: 4%;
+				overflow: hidden;
+			}
+
+			.media-feature-text-wrap-right {
+				position: absolute;
+				right: 0;
+				height: 100%;
+				width: 60%;
+				padding: 5% 3rem 3rem 20%;
+			}
+	
+			.video-wrap {
+				position: relative;
+				z-index: 1000;
+			}
+		}
+	}
+
 	.inquiry-form .card-img-top {
 		height: 20vw;
 	}
@@ -1323,6 +1351,14 @@ $breakpoints: (
 }
 
 @include media-breakpoint-up(lg) {
+	.media-feature-component{
+		.media-feature-wrap{
+			.media-feature-text-wrap-right {
+
+		padding: 10% 3rem 3rem 20%;
+	}
+	}
+	}
 	.landing-hero {
 		.hero-img {
 			position: absolute;
@@ -1469,20 +1505,35 @@ $breakpoints: (
 
 	.media-feature-component .media-feature-wrap-left {
 		width: 50%;
+		.media-feature-text-wrap-right {
+			position: absolute;
+			right: 0;
+			height: 100%;
+			width: 60%;
+			z-index: 100;
+			padding: 5rem 5rem 5rem 20%;
+		}
 	}
 
-	.media-feature-text-wrap-right {
-		position: absolute;
-		right: 0;
-		height: 100%;
-		width: 60%;
-		z-index: 100;
-		padding: 5rem 5rem 5rem 17rem;
-	}
+
 }
 
 
 @include media-breakpoint-down(sm) {
+
+	#hero-pause-play-toggle2, #hero-cc-toggle2 {
+		top: 65% !important;
+		font-size: 1rem !important;
+	}
+
+	.media-feature-text-wrap-right{
+		padding: 1rem 1rem 1rem 4rem !important;
+		margin-top: -1rem;
+	}	
+
+	.media-feature-component .lead {
+		font-size: 1rem !important;
+	}
 	.marketing-hero-module {
 		background-image: none;
 	}
@@ -1558,7 +1609,7 @@ $breakpoints: (
 
 			iframe,
 			video {
-				height: 300px !important;
+				// height: 300px !important;
 				width: 100%;
 			}
 		}
@@ -1575,6 +1626,21 @@ $breakpoints: (
 }
 
 @include media-breakpoint-down(md) {
+
+
+	.video-wrap {
+		position: relative;
+
+	#hero-pause-play-toggle2, #hero-cc-toggle2{
+		top: calc(90% - 0.5em);
+	}
+	}
+
+	.media-feature-text-wrap-right{
+		padding: 2rem 2rem 2rem 4rem !important;
+		margin-top: -1rem;
+	}	
+
 	.hero-header span {
 		padding: 0 15px;
 	}
@@ -1600,10 +1666,6 @@ $breakpoints: (
 
 	.inline-interstitial {
 		text-align: center;
-	}
-
-	.media-feature-wrap {
-		height: 50rem;
 	}
 
 	.faculty-info {
@@ -1747,14 +1809,6 @@ $breakpoints: (
 		margin-left: 4.5rem !important;
 	}
 
-	.media-feature-text-wrap-right {
-		position: absolute;
-		right: 0;
-		height: 100%;
-		width: 60%;
-		z-index: 100;
-		padding: 3rem 3rem 3rem 12rem;
-	}
 }
 
 
