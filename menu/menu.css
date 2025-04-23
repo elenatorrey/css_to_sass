@@ -34,7 +34,6 @@
   font-size: inherit !important;
 }
 .navbar-brand .header-logo {
-  width: 10rem;
   padding: 0.5rem 1rem;
 }
 
@@ -79,6 +78,11 @@
 }
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
   transform: translate(15%, 33%) rotate(-45deg);
+}
+
+.header-logo {
+  width: 10rem;
+  display: inline-block;
 }
 
 #main-menu .primary-menu-items .nav-item .nav-link,

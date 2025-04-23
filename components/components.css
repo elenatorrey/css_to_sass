@@ -1029,17 +1029,17 @@ video::cue {
     border-left: 1px solid hsl(0, 0%, 33.7%) !important;
   }
   .inquiry-form-hero {
-    background-image: "https://son-images.imgix.net/marketing/acceleratedstudents.jpg?q=30&auto=format";
+    background-image: url("https://son-images.imgix.net/marketing/acceleratedstudents.jpg?q=30&auto=format");
     min-height: 75vh;
     background-position: 20% 60%;
   }
   .np-programs-hero {
-    background-image: "https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format";
+    background-image: url("https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format");
     min-height: 75vh;
     background-position: 20% 40%;
   }
   .open-house-hero {
-    background-image: "https://son-images.imgix.net/marketing/openhouse.jpg?q=30&auto=format";
+    background-image: url("https://son-images.imgix.net/marketing/openhouse.jpg?q=30&auto=format");
     min-height: 75vh;
     background-position: 20% 60%;
   }
@@ -1141,7 +1141,7 @@ video::cue {
   .marketing-hero-top .hero-program-name,
   .marketing-hero-top .hero-open-house {
     font-size: 1.8rem !important;
-    margin-left: 1rem !important;
+    margin-left: 4.5rem !important;
   }
   .marketing-hero-top svg {
     width: 18rem;
@@ -1278,6 +1278,9 @@ video::cue {
   }
 }
 @media (max-width: 767.98px) {
+  .np-programs-hero-mobile {
+    background-image: url("https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format");
+  }
   .video-wrap {
     position: relative;
   }
@@ -1410,6 +1413,7 @@ video::cue {
   }
   .marketing-hero-top .hero-program-name {
     margin-left: 4.5rem !important;
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {

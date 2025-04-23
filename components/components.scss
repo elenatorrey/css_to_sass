@@ -1287,19 +1287,19 @@ $breakpoints: (
 
 
 	.inquiry-form-hero {
-		background-image:("https://son-images.imgix.net/marketing/acceleratedstudents.jpg?q=30&auto=format");
+		background-image:url("https://son-images.imgix.net/marketing/acceleratedstudents.jpg?q=30&auto=format");
 		min-height: 75vh;
 		background-position: 20% 60%;
 	}
 
 	.np-programs-hero {
-		background-image:("https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format");
+		background-image:url("https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format");
 		min-height: 75vh;
 		background-position: 20% 40%;
 	}
 
 	.open-house-hero {
-		background-image:("https://son-images.imgix.net/marketing/openhouse.jpg?q=30&auto=format");
+		background-image:url("https://son-images.imgix.net/marketing/openhouse.jpg?q=30&auto=format");
 		min-height: 75vh;
 		background-position: 20% 60%;
 	}
@@ -1436,7 +1436,7 @@ $breakpoints: (
 		.hero-program-name,
 		.hero-open-house {
 			font-size: 1.8rem !important;
-			margin-left: 1rem !important;
+			margin-left: 4.5rem !important;
 		}
 
 		svg {
@@ -1627,6 +1627,10 @@ $breakpoints: (
 
 @include media-breakpoint-down(md) {
 
+	.np-programs-hero-mobile {
+		background-image: url('https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format');
+	}
+
 
 	.video-wrap {
 		position: relative;
@@ -1807,6 +1811,7 @@ $breakpoints: (
 
 	.marketing-hero-top .hero-program-name {
 		margin-left: 4.5rem !important;
+		font-size: 1.4rem;
 	}
 
 }
