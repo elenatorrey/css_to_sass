@@ -1232,6 +1232,12 @@ $breakpoints: (
 	.play-pause-container, .cc-container {
 		top: 60%;
 	}
+
+	.np-programs-hero {
+		background-image:url("https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format");
+		min-height: 75vh;
+		background-position: 20% 40%;
+	}
 	
 }
 
@@ -1627,9 +1633,6 @@ $breakpoints: (
 
 @include media-breakpoint-down(md) {
 
-	.np-programs-hero-mobile {
-		background-image: url('https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format');
-	}
 
 
 	.video-wrap {

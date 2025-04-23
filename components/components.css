@@ -991,6 +991,11 @@ video::cue {
   .play-pause-container, .cc-container {
     top: 60%;
   }
+  .np-programs-hero {
+    background-image: url("https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format");
+    min-height: 75vh;
+    background-position: 20% 40%;
+  }
 }
 @media (min-width: 768px) {
   .media-feature-component .media-feature-wrap {
@@ -1278,9 +1283,6 @@ video::cue {
   }
 }
 @media (max-width: 767.98px) {
-  .np-programs-hero-mobile {
-    background-image: url("https://son-images.imgix.net/marketing/explore-np-marketing-hero.jpg?q=30&auto=format");
-  }
   .video-wrap {
     position: relative;
   }
