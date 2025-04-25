@@ -746,35 +746,6 @@
 
 /************** MEDIA QUERIES **************/
 
-$breakpoints: (
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
-);
-
-// Mixin for media-breakpoint-up (min-width)
-@mixin media-breakpoint-up($size) {
-    @media (min-width: map.get($breakpoints, $size)) {
-        @content;
-    }
-}
-
-// Mixin for media-breakpoint-down (max-width)
-@mixin media-breakpoint-down($size) {
-    @media (max-width: #{map.get($breakpoints, $size) - 0.02px}) {
-        @content;
-    }
-}
-
-// Mixin for media-breakpoint-between (min-width and max-width)
-@mixin media-breakpoint-between($min, $max) {
-    @media (min-width: map.get($breakpoints, $min)) and (max-width: #{map.get($breakpoints, $max) - 0.02px}) {
-        @content;
-    }
-}
-
 @media print {
     .scrolltop-wrap {
         display: none !important;
@@ -793,13 +764,13 @@ $breakpoints: (
     }
 }
 
-@include media-breakpoint-down(md) {
+@media (max-width: 767.98px) {
     .scrolltop-wrap {
         display: none;
     }
 }
 
-@include media-breakpoint-down(lg) {
+@media (max-width: 991.98px) {
     .footer-links {
       .border-start {
         border-left: none !important;
@@ -823,7 +794,7 @@ $breakpoints: (
     }
   }
 
-@include media-breakpoint-up(lg) {
+  @media (min-width: 992px) {
 
     .social--icons {
         flex-basis: 30%;
@@ -1207,7 +1178,7 @@ $breakpoints: (
     }
 }
 
-@include media-breakpoint-up(xl) {
+@media (min-width: 1200px) {
 
     .social--icons {
         ul {
@@ -1244,7 +1215,7 @@ $breakpoints: (
 
 }
 
-@include media-breakpoint-up(xxl) {
+@media (min-width: 1400px) {
 
     #main-menu {
         margin-left: 1rem;
