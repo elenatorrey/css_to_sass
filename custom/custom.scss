@@ -1461,36 +1461,7 @@ svg {
 
 /****************************************MEDIA QUERIES***************************************/
 
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-
-// Mixin for media-breakpoint-up (min-width)
-@mixin media-breakpoint-up($size) {
-    @media (min-width: map.get($breakpoints, $size)) {
-      @content;
-    }
-  }
-  
-  // Mixin for media-breakpoint-down (max-width)
-  @mixin media-breakpoint-down($size) {
-    @media (max-width: #{map.get($breakpoints, $size) - 0.02px}) { 
-      @content;
-    }
-  }
-  
-  // Mixin for media-breakpoint-between (min-width and max-width)
-  @mixin media-breakpoint-between($min, $max) {
-    @media (min-width: map.get($breakpoints, $min)) and (max-width: #{map.get($breakpoints, $max) - 0.02px}) {
-      @content;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
+  @media (max-width: 767.98px) {
     .marketing-footer .location {
       padding-top: 2rem;
     }
@@ -1545,7 +1516,7 @@ $breakpoints: (
     }
   }
   
-  @include media-breakpoint-up(md) {
+  @media (min-width: 768px) {
     .marketing-footer i {
       float: right;
     }
@@ -1564,7 +1535,7 @@ $breakpoints: (
     }
   }
   
-  @include media-breakpoint-up(xl) {
+  @media (min-width: 1200px) {
     .eyebrow {
       font-size: 2.9rem;
     }
@@ -1575,7 +1546,7 @@ $breakpoints: (
   
   }
   
-  @include media-breakpoint-down(sm) {
+  @media (max-width: 575.98px) {
     .secondary-title-container {
       padding: 1rem 0 !important;
     }
@@ -1595,7 +1566,7 @@ $breakpoints: (
     }
   }
   
-  @include media-breakpoint-down(xl) {
+  @media (max-width: 1199.98px) {
     .full-width-content .full-width-paragraph {
       margin-left: 1rem;
       margin-right: 1rem;

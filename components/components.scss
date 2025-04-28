@@ -1174,37 +1174,8 @@ video::cue {
 
 /******************************************* Media Queries*****************************************************/
 
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
 
-// Mixin for media-breakpoint-up (min-width)
-@mixin media-breakpoint-up($size) {
-  @media (min-width: map.get($breakpoints, $size)) {
-    @content;
-  }
-}
-
-// Mixin for media-breakpoint-down (max-width)
-@mixin media-breakpoint-down($size) {
-  @media (max-width: #{map.get($breakpoints, $size) - 0.02px}) { // Prevents overlap
-    @content;
-  }
-}
-
-// Mixin for media-breakpoint-between (min-width and max-width)
-@mixin media-breakpoint-between($min, $max) {
-  @media (min-width: map.get($breakpoints, $min)) and (max-width: #{map.get($breakpoints, $max) - 0.02px}) {
-    @content;
-  }
-}
-
-
-@include media-breakpoint-up(sm) {
+@media (min-width: 576px) {
 
 	div.form_container:not(.form_width_narrow) div.form_question.form_layout_table .form_responses,
 	div.form_container:not(.form_width_narrow) div.form_question.form_layout_table .form_responses_labels {
@@ -1242,7 +1213,7 @@ $breakpoints: (
 }
 
 
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) {
 
 	.media-feature-component {
 		.media-feature-wrap {
@@ -1356,7 +1327,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-up(lg) {
+@media (min-width: 992px) {
 	.media-feature-component{
 		.media-feature-wrap{
 			.media-feature-text-wrap-right {
@@ -1427,7 +1398,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-up(xl) {
+@media (min-width: 1200px) {
 	.inquiry-form .form_question:not(.form_select) {
 		display: inline-block;
 		margin-right: 0.5rem;
@@ -1490,7 +1461,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-up(xxl) {
+@media (min-width: 1400px) {
 	.main-hero-img-wrap {
 		height: 70vh;
 	}
@@ -1525,7 +1496,7 @@ $breakpoints: (
 }
 
 
-@include media-breakpoint-down(sm) {
+@media (max-width: 576px) {
 
 	#hero-pause-play-toggle2, #hero-cc-toggle2 {
 		top: 65% !important;
@@ -1631,7 +1602,7 @@ $breakpoints: (
 
 }
 
-@include media-breakpoint-down(md) {
+@media (max-width: 768px) {
 
 
 
@@ -1703,7 +1674,7 @@ $breakpoints: (
 }
 
 
-@include media-breakpoint-down(lg) {
+@media (max-width: 992px) {
 	.marketing-hero-top .hero-open-house {
 		margin-left: 3rem;
 		width: 15rem;
@@ -1775,7 +1746,7 @@ $breakpoints: (
 }
 
 
-@include media-breakpoint-down(xl) {
+@media (max-width: 1200px) {
 
 	.wide-testimonial-right .bg-testimonial-img,
 	.wide-testimonial-left .bg-testimonial-img {
@@ -1807,7 +1778,7 @@ $breakpoints: (
 }
 
 
-@include media-breakpoint-down(xxl) {
+@media (max-width: 1400px) {
 	.directory-feature .card-img-top {
 		max-height: 20rem;
 	}
@@ -1822,7 +1793,7 @@ $breakpoints: (
 
 
 
-@include media-breakpoint-between(sm, md) {
+@media (min-width: 576px) and (max-width: 767.98px) {
 	.main-hero-img-wrap {
 		height: 35vh;
 	}
@@ -1842,7 +1813,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-between(md, lg) {
+@media (min-width: 768px) and (max-width: 991.98px) {
 	.main-hero-img-wrap {
 		height: 70vh;
 	}
@@ -1857,7 +1828,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-between(lg, xl) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
 	.main-hero-img-wrap {
 		height: 70vh;
 	}
@@ -1892,7 +1863,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-between(xl, xxl) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
 	.main-hero-img-wrap {
 		height: 70vh;
 	}
@@ -1912,7 +1883,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-between(sm, xxl) {
+@media (min-width: 576px) and (max-width: 1399.98px) {
 	.media-text-component {
 		iframe {
 			width: 85%;
@@ -1920,7 +1891,7 @@ $breakpoints: (
 	}
 }
 
-@include media-breakpoint-between(md, xxl) {
+@media (min-width: 768px) and (max-width: 1399.98px) {
 	.media-feature-wrap {
 		height: 50rem;
 	}

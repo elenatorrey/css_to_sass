@@ -754,36 +754,8 @@
 
 
 /********************************************MEDIA QUERIES*******************************************/
-$breakpoints: (
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
-);
 
-// Mixin for media-breakpoint-up (min-width)
-@mixin media-breakpoint-up($size) {
-    @media (min-width: map.get($breakpoints, $size)) {
-        @content;
-    }
-}
-
-// Mixin for media-breakpoint-down (max-width)
-@mixin media-breakpoint-down($size) {
-    @media (max-width: #{map.get($breakpoints, $size) - 0.02px}) {
-        @content;
-    }
-}
-
-// Mixin for media-breakpoint-between (min-width and max-width)
-@mixin media-breakpoint-between($min, $max) {
-    @media (min-width: map.get($breakpoints, $min)) and (max-width: #{map.get($breakpoints, $max) - 0.02px}) {
-        @content;
-    }
-}
-
-@include media-breakpoint-up(lg) {
+@media (min-width: 992px) {
     .hot-release-right .release-thumb .release-img > img {
         height: 100%;
         object-fit: cover;
@@ -793,7 +765,7 @@ $breakpoints: (
     }
 }
 
-@include media-breakpoint-down(lg) {
+@media (max-width: 991.98px) {
     .newsroom .hot-release .hot-release-right .release-thumb {
         height: 47.5% !important;
     }
@@ -805,7 +777,7 @@ $breakpoints: (
     }
 }
 
-@include media-breakpoint-down(md) {
+@media (max-width: 767.98px) {
     .newsroom .page-header h1 {
         font-size: 32.437px;
     }

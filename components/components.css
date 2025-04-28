@@ -1203,7 +1203,7 @@ video::cue {
     padding: 5rem 5rem 5rem 20%;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   #hero-pause-play-toggle2, #hero-cc-toggle2 {
     top: 65% !important;
     font-size: 1rem !important;
@@ -1282,7 +1282,7 @@ video::cue {
     top: 80%;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .video-wrap {
     position: relative;
   }
@@ -1333,7 +1333,7 @@ video::cue {
     object-fit: cover;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .marketing-hero-top .hero-open-house {
     margin-left: 3rem;
     width: 15rem;
@@ -1387,7 +1387,7 @@ video::cue {
     margin-bottom: 1rem;
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   .wide-testimonial-right .bg-testimonial-img,
   .wide-testimonial-left .bg-testimonial-img {
     background-size: cover;
@@ -1409,7 +1409,7 @@ video::cue {
     font-size: 1.3rem;
   }
 }
-@media (max-width: 1399.98px) {
+@media (max-width: 1400px) {
   .directory-feature .card-img-top {
     max-height: 20rem;
   }
