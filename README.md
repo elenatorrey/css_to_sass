@@ -127,6 +127,27 @@ npm run publish_menu
 npm run publish_newsroom
 ```
 
+ Or, alternatively, you can use one command to do all threee things (compile, upload, and publsih):
+
+## Compile, Upload, and Publish to Development Site (Sonhouse)
+
+```
+npm run components_sh
+npm run custom_sh
+npm run menu_sh
+npm run newsroom_sh
+```
+
+
+## Compile, Upload, and Publish to Live Site
+
+```
+npm run components
+npm run custom
+npm run menu
+npm run newsroom
+```
+
 ## Git Workflow for Syncing Projects
 
 1. Pull the latest changes (every time before working)
