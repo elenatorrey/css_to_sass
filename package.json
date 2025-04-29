@@ -25,6 +25,10 @@
     "menu": "npm run compile_menu && npm run upload_menu && npm run publish_menu",
     "custom": "npm run compile_custom && npm run upload_custom && npm run publish_custom",
     "components": "npm run compile_components && npm run upload_components && npm run publish_components",
-    "newsroom": "npm run compile_newsroom && npm run upload_newsroom && npm run publish_newsroom"
+    "newsroom": "npm run compile_newsroom && npm run upload_newsroom && npm run publish_newsroom",
+    "menu_sh": "npm run compile_menu && npm run upload_menu && php menu/publish_menu_sonhouse.php",
+    "custom_sh": "npm run compile_custom && npm run upload_custom && php custom/publish_custom_sonhouse.php",
+    "components_sh": "npm run compile_components && npm run upload_components && php components/publish_components_sonhouse.php",
+    "newsroom_sh": "npm run compile_newsroom && npm run upload_newsroom && php newsroom/publish_newsroom_sonhouse.php"
   }
 }
