@@ -21,6 +21,7 @@
     "publish_components": "php components/publish_components.php",
     "publish_custom": "php custom/publish_custom.php",
     "publish_menu": "php menu/publish_menu.php",
-    "publish_newsroom": "php newsroom/publish_newsroom.php"
+    "publish_newsroom": "php newsroom/publish_newsroom.php",
+    "menu": "npm run compile_components && npm run upload_components && npm run publish_menu"
   }
 }

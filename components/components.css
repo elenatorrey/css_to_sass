@@ -1,4 +1,8 @@
 /*********************************************ACCORDIONS*********************************************/
+.accordion button:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
 .accordion .accordion-item {
   border: none;
 }
