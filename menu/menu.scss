@@ -114,6 +114,9 @@
     padding: $cell-padding;
   }
 }
+.gsc-search-button-v2 {
+  padding: 10px 27px;
+}
 
 @media (max-width: $breakpoint-mobile) {
   .gsc-control-cse {
