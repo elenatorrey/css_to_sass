@@ -115,11 +115,6 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-  .gsc-control-cse {
-    .gs-snippet {
-      padding-left: $snippet-padding-mobile;
-    }
-
     .gsc-table-cell-snippet-close {
       padding: $cell-padding;
     }
