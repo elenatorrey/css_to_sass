@@ -98,6 +98,12 @@
       max-height: $image-max-height;
     }
   }
+  .gsc-control-cse {
+  .gs-web-image-box {
+    .gs-image {
+      max-width: $thumbnail-max-width;
+    }
+  }
 
   .gs-promotion-image-box {
     .gs-promotion-image {
@@ -105,7 +111,10 @@
       max-height: $image-max-height;
     }
   }
-
+   .gs-snippet {
+    // padding-left: 90px;
+  }
+}
   .gsc-table-cell-snippet-close {
     padding: $cell-padding;
   }
