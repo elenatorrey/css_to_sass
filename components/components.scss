@@ -537,6 +537,12 @@ video::cue {
 		width: 100% !important;
 	}
 }
+.marketing-hero-top {
+  .hero-program-name,
+  .hero-open-house {
+    margin-left: $hero-margin-left !important;
+  }
+}
 
 
 /**************************************** TESTIMONIALS ***********************************************/
