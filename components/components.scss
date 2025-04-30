@@ -538,11 +538,11 @@ video::cue {
 	}
 }
 .marketing-hero-top {
-  .hero-program-name,
-  .hero-open-house {
-    margin-left: 3.5em !important;
+	.hero-program-name,
+	.hero-open-house {
+	  margin-left: $hero-margin-left !important;
+	}
   }
-}
 
 
 /**************************************** TESTIMONIALS ***********************************************/

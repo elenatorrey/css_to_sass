@@ -3,7 +3,7 @@
     "@univmarcomm/rochester-design-tokens": "^0.3.0"
   },
   "devDependencies": {
-    "sass": "^1.83.4"
+    "sass": "^1.87.0"
   },
   "scripts": {
     "compile_components": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens components/components.scss:components/components.css",
