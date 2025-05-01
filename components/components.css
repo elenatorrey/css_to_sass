@@ -1,6 +1,6 @@
 /*********************************************ACCORDIONS*********************************************/
 .accordion button:focus {
-  outline: 2px solid blue;
+  outline: 2px solid hsl(230, 62.8%, 42.2%);
   outline-offset: 2px;
 }
 .accordion .accordion-item {
@@ -449,6 +449,11 @@ video::cue {
 }
 .marketing-hero-module .card {
   width: 100% !important;
+}
+
+.marketing-hero-top .hero-program-name,
+.marketing-hero-top .hero-open-house {
+  margin-left: 3.5em !important;
 }
 
 /**************************************** TESTIMONIALS ***********************************************/
