@@ -98,17 +98,6 @@
   background-color: #4d90fe;
 }
 
-.gsc-search-button-v2  {
-  font-size: 0;
-  padding: 10px 27px;
-  width: auto;
-  vertical-align: middle;
-  border: 1px solid  #666;
-  border-radius: 2px;
-  border-color: #3079ed;
-  background-color: #4d90fe;
-}
-
 .gsc-table-cell-snippet-close {
   padding: 1px;
 }
