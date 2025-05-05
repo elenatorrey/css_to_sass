@@ -80,7 +80,7 @@ html {
 }
 
 .utopia-font {
-  font-family: utopia-std, serif !important;
+  font-family: "utopia-std, serif" !important;
 }
 
 .gradient {
@@ -236,7 +236,7 @@ h6, .h6 {
 .eyebrow {
   font-weight: 700;
   letter-spacing: -0.0625rem;
-  font-family: utopia-std, serif !important;
+  font-family: "utopia-std, serif" !important;
   padding-bottom: 1rem !important;
   margin-top: 3rem !important;
 }
