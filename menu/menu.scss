@@ -84,26 +84,12 @@
     border: none;
 }
 
-.gsc-control-cse {
-    font-size: $font-size-base;
-}
-.gsc-table-result {
+.gsc-control-cse, .gsc-table-result {
     font-size: $font-size-base;
 }
 
 .gs-web-image-box, 
     .gs-image {
-      max-width: 60px;
-      max-height: 100px;
-    }
-
-.gs-web-image-box, 
-    .gs-image {
-        max-width: 3.5em;
-    }
-
-  .gs-promotion-image-box,
-    .gs-promotion-image {
       max-width: 60px;
       max-height: 100px;
     }
@@ -111,10 +97,6 @@
   .gs-web-image-box, .gs-promotion-image-box {
         float: left;
         padding: 2px 8px 2px 0;
-        margin-right: 23px;
-        margin-left: 0;
-        text-align: center;
-        width: 62px;
 }
 
   .gsc-search-button-v2 {
