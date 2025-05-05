@@ -88,6 +88,11 @@
     font-size: $font-size-base;
 }
 
+.gs-web-image-box, .gs-promotion-image-box {
+    float: left;
+    padding: 2px 8px 2px 0;
+}
+
 .gsc-search-button-v2 {
     font-size: 0;
     padding: 10px 27px;
