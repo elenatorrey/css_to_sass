@@ -91,11 +91,12 @@
 .gs-web-image-box, .gs-promotion-image-box {
     float: left;
     padding: 2px 8px 2px 0;
+    width: 72px
 }
 
 .gs-web-image-box, .gs-image, .gs-promotion-image-box, .gs-promotion-image {
     max-width: 65px;
-    max-height: 120px;
+    max-height: 125px;
 }
 
 .gsc-search-button-v2 {
