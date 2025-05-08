@@ -463,7 +463,7 @@ a {
 
 .component {
     p a, 
-    li a, 
+    li a,
     table a {
       &:not(
         .breadcrumb-item, 
@@ -1098,6 +1098,8 @@ svg {
       color: $color_white;
       width: min-content;
     }
+
+
   }
 
 /********************************************************WYSIWYG********************************************************/
