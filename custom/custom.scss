@@ -463,7 +463,8 @@ a {
 
 .component {
     p a, 
-    li a {
+    li a, 
+    table a {
       &:not(
         .breadcrumb-item, 
         .black-link, 

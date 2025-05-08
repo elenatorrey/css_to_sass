@@ -499,6 +499,7 @@
 .newsroom-article-title {
   font-weight: 900;
   font-size: 1.3rem;
+  text-decoration: underline;
 }
 .newsroom-component-title {
   font-weight: 900;
