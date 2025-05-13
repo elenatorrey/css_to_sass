@@ -8,7 +8,7 @@
 	background: $bg-color;
 	color: $text-color;
 	text-decoration: none;
-	font-weight: 900;
+	font-weight: 600;
 	transition: 0.25s cubic-bezier(.66, -.39, .41, 1.35);
 
 	&:hover {
@@ -1068,7 +1068,6 @@ video::cue {
 				margin-bottom: 0.1rem;
 				font-family: $font_proxima;
 				width: fit-content;
-				color: $color_dark_gray;
 				background-color: $color_dandelion;
 				border-radius: 0;
 				padding: 0 0.5rem;

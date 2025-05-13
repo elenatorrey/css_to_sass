@@ -466,7 +466,7 @@ a {
     li a,
     table a {
       &:not(
-        .breadcrumb-item, 
+        .breadcrumb-item a, 
         .black-link, 
         .blue-link, 
         .white-link, 
@@ -493,7 +493,7 @@ a {
       }
   
       &:hover {
-        &:not(.breadcrumb-item, 
+        &:not(.breadcrumb-item a, 
         .black-link, .blue-link,
          .white-link, 
          .yellow-link, 

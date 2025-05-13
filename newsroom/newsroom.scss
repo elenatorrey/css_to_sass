@@ -370,6 +370,8 @@
     }
 
     .release-meta {
+        padding-left: 0rem !important;
+
         ul {
             margin-bottom: 2px;
             padding-left: 0 !important;
@@ -666,6 +668,9 @@
 }
 &-article-title{
     font-size: 1.3rem;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 &-component-title{
     font-weight: 900;

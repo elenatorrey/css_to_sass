@@ -477,7 +477,7 @@ a:hover {
   content: "\f1c1";
 }
 
-.component p a:not(.breadcrumb-item,
+.component p a:not(.breadcrumb-item a,
 .black-link,
 .blue-link,
 .white-link,
@@ -497,7 +497,7 @@ a:hover {
 .btn-blue-ext,
 .btn-yellow-ext,
 .btn-black-ext),
-.component li a:not(.breadcrumb-item,
+.component li a:not(.breadcrumb-item a,
 .black-link,
 .blue-link,
 .white-link,
@@ -517,7 +517,7 @@ a:hover {
 .btn-blue-ext,
 .btn-yellow-ext,
 .btn-black-ext),
-.component table a:not(.breadcrumb-item,
+.component table a:not(.breadcrumb-item a,
 .black-link,
 .blue-link,
 .white-link,
@@ -542,7 +542,7 @@ a:hover {
   transition: color 0.25s linear;
   font-weight: 700;
 }
-.component p a:hover:not(.breadcrumb-item,
+.component p a:hover:not(.breadcrumb-item a,
 .black-link, .blue-link,
 .white-link,
 .yellow-link,
@@ -560,7 +560,7 @@ a:hover {
 .btn-blue-ext,
 .btn-yellow-ext,
 .btn-black-ext),
-.component li a:hover:not(.breadcrumb-item,
+.component li a:hover:not(.breadcrumb-item a,
 .black-link, .blue-link,
 .white-link,
 .yellow-link,
@@ -578,7 +578,7 @@ a:hover {
 .btn-blue-ext,
 .btn-yellow-ext,
 .btn-black-ext),
-.component table a:hover:not(.breadcrumb-item,
+.component table a:hover:not(.breadcrumb-item a,
 .black-link, .blue-link,
 .white-link,
 .yellow-link,

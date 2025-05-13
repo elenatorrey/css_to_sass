@@ -275,6 +275,9 @@
 .newsroom .release .release-category a:last-child:after {
   display: none;
 }
+.newsroom .release .release-meta {
+  padding-left: 0rem !important;
+}
 .newsroom .release .release-meta ul {
   margin-bottom: 2px;
   padding-left: 0 !important;
@@ -512,6 +515,9 @@
 }
 .newsroom-article-title {
   font-size: 1.3rem;
+}
+.newsroom-article-title:hover {
+  text-decoration: underline;
 }
 .newsroom-component-title {
   font-weight: 900;
