@@ -6,10 +6,10 @@
     "sass": "^1.87.0"
   },
   "scripts": {
-    "compile_components": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens components/components.scss:components/components.css",
-    "compile_custom": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens custom/custom.scss:custom/custom.css",
-    "compile_menu": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens menu/menu.scss:menu/menu.css",
-    "compile_newsroom": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens newsroom/newsroom.scss:newsroom/newsroom.css",
+    "compile_components": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens components/components.scss:components/components.css --style=compressed",
+    "compile_custom": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens custom/custom.scss:custom/custom.css --style=compressed",
+    "compile_menu": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens menu/menu.scss:menu/menu.css --style=compressed",
+    "compile_newsroom": "sass --load-path=node_modules/@univmarcomm/rochester-design-tokens/tokens newsroom/newsroom.scss:newsroom/newsroom.css --style=compressed",
     "upload_components": "php components/upload_components.php",
     "upload_custom": "php custom/upload_custom.php",
     "upload_menu": "php menu/upload_menu.php",

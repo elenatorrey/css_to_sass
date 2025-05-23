@@ -762,6 +762,10 @@ a {
     &-yellow {
       background-color: $color_dandelion;
     }
+
+    &-black {
+      background-color: $color_black;
+    }
   
     &-charcoal {
       background-color: $color_charcoal;
@@ -769,8 +773,11 @@ a {
       &-transparent {
         background: rgba(37, 37, 37, 0.8);
       }
+
     }
-  
+    &-secondary {
+      background-color: $color_lighter_gray !important;
+    }
     &-dark-gray,
     &-dark-grey {
       background-color: $color_dark_gray;
