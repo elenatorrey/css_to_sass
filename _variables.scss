@@ -1,16 +1,15 @@
-@use "tokens";
 @use "sass:map";
 
-$color_charcoal: map.get(tokens.$tokens, "rochester", "color", "secondary", "charcoal", "$value");
-$color_interactive_blue: map.get(tokens.$tokens, "rochester", "color", "primary", "interactiveBlue", "$value");
-$color_rochester_blue: map.get(tokens.$tokens, "rochester", "color", "primary", "rochesterBlue", "$value");
-$color_darker_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "darkerGray", "$value");
-$color_light_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "lightGray", "$value");
-$color_lighter_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "lighterGray", "$value");
-$color_dark_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "darkGray", "$value");
-$color_medium_gray: map.get(tokens.$tokens, "rochester", "color", "secondary", "mediumGray", "$value");
-$color_dandelion: map.get(tokens.$tokens, "rochester", "color", "primary", "dandelionYellow", "$value");
-$color_white: map.get(tokens.$tokens, "rochester", "color", "secondary", "white", "$value");
+$color_charcoal: #252525;
+$color_interactive_blue: #283FAF;
+$color_rochester_blue: #00205B;
+$color_darker_gray: #565656;
+$color_light_gray: #E7E7E7;
+$color_lighter_gray: #F4F4F4;
+$color_dark_gray: #787878;
+$color_medium_gray: #C0C0C0;
+$color_dandelion: #FFC70A;
+$color_white: #ffffff;
 $background-transparent: transparent;
 $color_black: #000;
 $background-color_9: rgba(0, 0, 0, 0.6);
