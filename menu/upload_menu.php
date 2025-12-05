@@ -1,6 +1,6 @@
 <?php
 // Cascade CMS SOAP WSDL URL
-$soapURL = "https://its-wcms-up01.its.rochester.edu:8443/ws/services/AssetOperationService?wsdl";
+$soapURL = "";
 
 $client = new SoapClient 
 ( 
